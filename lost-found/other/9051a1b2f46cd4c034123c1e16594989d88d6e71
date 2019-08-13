@@ -1,0 +1,9 @@
+png("8.Attlēls", width=600, height=350)
+par(mar = c(5, 5, 1, 3))
+D<-dati_h$D.....0.01
+c<-dati_h$c.g.cm.3
+h<-dati_h$h.mm
+plot(h,D,xlab="h,mm",sub=expression("8.Attēls. Optiskā blīvuma atkarība no stabiņa augstuma K"[2]*"Cr"[2]*"O"[7]*" šķīdumam caur M-53 filtru (533nm)") ,col="red")
+fit<-lm(D~0+h)
+curve(x*coef(fit)[1],add=TRUE)
+dev.off()

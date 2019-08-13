@@ -1,0 +1,22 @@
+#rm(list=ls())
+#library("XLConnect")
+#setwd("~/Labori daþâdi/Rydberg")
+dati<-readWorksheetFromFile("Rydberg.xlsx",sheet=1,endRow=8,endCol=3)
+la<-dati$la
+n1<-dati$n1
+n2<-dati$n2
+k=(1/n1^2-1/n2^2)
+fit<-lm(1/la~0+k)
+yticks<-c(1.6e-5,2.4e-5)
+plot(k,1/la,sub=expression(paste("Fig.1. 1/",lambda," vs k")), xlab="k", ylab=expression(paste("1/",lambda,", 1/A")),pch=2, col="blue")
+curve(x*coef(fit)[1],add=TRUE)
+legend("topleft",legend=c("exp values","function f(x)"),pch=c(2,NA),lwd=c(NA,1), col=c("blue","black"))
+n<-1:8
+R<-1.108e-03*10^10
+h<-6.62607004*10^-34
+c<-3.0*10^8
+e<-1.6*10^-19
+E<--R*h*c/(e*n^2)
+E2<-round(E,digits=2)
+
+#write.table(E2,"E.dat",sep=" ",row.names=FALSE)

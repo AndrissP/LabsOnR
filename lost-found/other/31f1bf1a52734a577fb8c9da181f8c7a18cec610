@@ -1,0 +1,28 @@
+#library("XLConnect")
+dati<-readWorksheetFromFile("Photoelectric_effect.xlsx",sheet=1,startRow<-2,endRow=23,startCol=2,endCol=5)
+f<-dati$f..Hz
+U1<-dati$U_1..V
+U2<-dati$U_2..V
+U3<-dati$U_3..V
+e<-1.6*10^-19
+E1<-U1*e
+E2<-U2*e
+E3<-U3*e
+fit1<-lm(E1~f)
+fit2<-lm(E2~f)
+fit3<-lm(E3~f)
+h1<-5.967e-33
+h2<-5.970e-33
+h3<-5.927e-33
+dat<-data.frame(h1,h2,h3)
+s1<-1.565e-34
+s2<-1.500e-34
+s3<-1.404e-34
+
+print(rowMeans(dat))
+print(mean(s1,s2,s3))
+
+plot(f,E1,pch=3,sub="Fig.1. Potential Energy of electrons (Wp) vs frequency of the light (f)",xlab="f,Hz",ylab="Ep,J",col="green")
+points(f,E2,pch=7,col="red")
+points(f,E3,pch=8,col="blue")
+legend("topleft", legend=c("1. exp. h=5.97e-33+/-1.6e-34","2. exp., h=5.97e-33+/-1.5e-34","3. exp., h=5.93e-33+/-1.4e-34"), pch=c(3,7,8),col=c("green","red","blue"))

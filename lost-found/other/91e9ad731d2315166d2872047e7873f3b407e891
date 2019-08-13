@@ -1,0 +1,85 @@
+install.packages("XLConnect")
+library("XLConnect")
+library("rJava")
+install.packages("abc")
+library("abc")
+Sys.getenv("JAVA_HOME")
+Sys.setenv(JAVA_HOME="c:\\java\\jdk1.7.0_55\\jre")
+Sys.getenv("JAVA_HOME")
+library("XLConnect")
+library("rJava")
+R.Version()
+Sys.getenv("JAVA_HOME")
+if (Sys.getenv("JAVA_HOME")!="")
+Sys.setenv(JAVA_HOME="")
+library(rJava)
+Sys.getenv("JAVA_HOME")
+library("XLConnect")
+dati<-readWorksheetFromFile("Photoelectric_effect”.xlsx",sheet=1,startRow<-2,endRow=15,endCol=2)
+getwd()
+source('~/Labori dažādi/Photo.R')
+dati
+source('~/Labori dažādi/Photo.R')
+dati
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+plot(f,E1)
+source('~/Labori dažādi/Photo.R')
+plot(f,E1)
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+fit
+summary(fit)
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+summary(fit2)
+summary(fit3)
+fit1[1]
+coefficients(fit1)
+coefficients(fit1)[1]
+coefficients(fit1)[2]
+coefficients(fit1)[2]+2
+coefficients(fit1)[2]+5
+coefficients(fit1)[1]+5
+fit1$Intercept
+fit1$f
+coefficients(fit1)$F
+coefficients(fit1)$f
+coefficients(fit1)
+coefficients(fit1)[,1]
+coefficients(fit1)[1,]
+source('~/Labori dažādi/Photo.R')
+mean(h1,h2,h3)
+sd(h1,h2,h3)
+source('~/Labori dažādi/Photo.R')
+sd(dat)
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+dat
+mean(dat)
+rowMeans(dat)
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+fit5<-lm(E1[13:23]~f[13:23])
+summary(fit3)
+fit5<-lm(E1[16:23]~f[16:23])
+summary(fit3)
+fit5<-lm(E1[1:5]~f[1:5])
+summary(fit3)
+E[1:3]
+E1[1:3]
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+source('~/Labori dažādi/Photo.R')
+p1
+p3
+mean(p1)

@@ -1,0 +1,146 @@
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+sin
+arcsin(1)
+arsin(1)
+asin(1)
+asin(0)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+th
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+th
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+th
+sin(20.6/2)
+2*pi/180
+180/2/pi
+180/pi
+sin(180/57.29)
+sin(180/57.30)
+sin(20.6/57.29578/2)^4
+1/sin(20.6/57.29578/2)^2/sqrt(7.8)
+1/sin(20.6/57.29578)^2/sqrt(7.8)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+plot(sin,N)
+plot(1/sin,N)
+plot((1/sin)^4,N)
+plot((1/sin)^2,N)
+plot((1/sin),N)
+plot((1/sin)^4,N)
+plot((1/sin^4*r^2),N)
+plot((1/sin^4),N)
+plot(1/(sin^4*r^2),N)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+lines(arg,fit$fitted.values,lwd=2)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+lines(arg[1:4],fit$fitted.values,lwd=2)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+summary(fit)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+summary(fit)
+plot(fit)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+r
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+summary(fit_al)
+summary(fit)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+dZ2
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+fit
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+summary(fit)
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+dev.off()
+dev.off()
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+getwd()
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+?png
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+Nalau
+Zalau
+1/7
+N_al[1]
+N_au[1]
+fit
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+fit
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+Nalau
+Zalau
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+N_au
+N_al
+1/20
+1/15
+Nalau
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+Nalau
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+source('~/Labori dažādi/Kvanti/Rezerforda/Rezerforda.R')
+dNN
+dNal/N_al
+dNN*Nalau
+arg_al
+Zalau
+arg_al
+source('~/Labori dažādi/Kvanti/Udenradis/Udenradis.R')
+plot(alpha_Hg,lambda)
+length(alpha_Hg)
+length(lambda)
+source('~/Labori dažādi/Kvanti/Udenradis/Udenradis.R')
+plot(alpha_Hg,lambda)
+source('~/Labori dažādi/Kvanti/Udenradis/Udenradis.R')

@@ -1,0 +1,512 @@
+D
+save_rate=7.59*2
+x=Dati$V1 #[1500:2500]
+y=Dati$V2 #[1500:2500]
+x[x==0]='NA'
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+time<-(0:n)/save_rate
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+#plot(y)
+n=length(x)-1
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(0.75)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D
+D_koef
+D_koef2
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x=Dati$V1 [1500:2500]
+x=Dati$V1 [500:2500]
+x[x==0]='NA'
+y=Dati$V2 [500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+D
+plot(time2[1:7000],da1$mean[1:7000])
+D_koef<-fit2$coefficients[2]/(2*N_dim)*10^-12
+plot(y)
+plot(time2[1:70],da1$mean[1:70])
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Skin/")
+library("XLConnect")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-4,endRow=11,startCol=3,endCol=11)
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Sabruksana/")
+library("XLConnect")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-4,endRow=11,startCol=3,endCol=11)
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=20,startCol=1,endCol=2)
+u<-dati$P..N
+u<-dati$u..mm
+P<-dati$P..N
+plot(P,n)
+plot(P,u)
+plot(u,P)
+plot(P,u)
+plot(P,u, pch=4)
+plot(P,u, pch=4, col="blue")
+plot(P,u, pch=3, col="blue")
+points(tail(P,7),tail(u,7))
+plot(P[1:2],u[1:2], pch=3, col="blue")
+points(tail(P,7),tail(u,7))
+plot(P[1:2],u[1:2], pch=3, col="blue")
+points(tail(P,7),tail(u,7))
+plot(P[1:2],u[1:2], pch=3, col="blue")
+plot(P,u,pch=NA)
+points(P[1:2],u[1:2], pch=3, col="blue")
+points(tail(P,7),tail(u,7))
+points(tail(P,7),tail(u,7),col="red")
+fit<-lm(u~P)
+Pre=P[3:7]
+ure=u[3:7]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit)
+abline(fit,col="red")
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+summary(fit)
+c=1/fit$coefficients[1]
+c
+c=1/fit$coefficients[2]
+c
+c=1/fit$coefficients[2]*10^3
+c
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[3:7]
+ure=u[3:7]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c=1/fit$coefficients[2]*10^3
+c=fit$coefficients[2]*10^-3
+c
+c=fit$coefficients[2]*10^(-3)
+c
+fit
+summary(fit)
+fit$coefficients[2,2]
+fit$coefficients[2]
+fit$coefficients[2,]
+summary(fit)$coefficients[2,2]
+dc<-summary(fit)$coefficients[2,2]
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=21,startCol=4,endCol=5)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=21,startCol=4,endCol=5)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[3:10]
+ure=u[3:10]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c=fit$coefficients[2]*10^(-3)
+dc<-summary(fit)$coefficients[2,2]
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=20,startCol=1,endCol=2)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[3:9]
+ure=u[3:9]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c=fit$coefficients[2]*10^(-3)
+dc<-summary(fit)$coefficients[2,2]
+c=append(4)
+c
+c=append(c)
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=20,startCol=1,endCol=2)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[3:9]
+ure=u[3:9]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c=fit$coefficients[2]*10^(-3)
+dc<-summary(fit)$coefficients[2,2]
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=21,startCol=4,endCol=5)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+points(P[1:2],u[1:2], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[3:10]
+ure=u[3:10]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c[2]=fit$coefficients[2]*10^(-3)
+dc[2]<-summary(fit)$coefficients[2,2]
+c
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=23,startCol=7,endCol=8)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+points(P[1:5],u[1:5], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[6:12]
+ure=u[6:12]
+Pre=P[6:13]
+ure=u[6:13]
+Pre
+points(P[1:5],u[1:5], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[6:12]
+ure=u[6:12]
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c[3]=fit$coefficients[2]*10^(-3)
+dc[3]<-summary(fit)$coefficients[2,2]
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=23,startCol=7,endCol=8)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA)
+Pre=P[6:10]
+ure=u[6:10]
+points(P[1:5],u[1:5], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+Pre
+c[4]=fit$coefficients[2]*10^(-3)
+dc[4]<-summary(fit)$coefficients[2,2]
+plot(P,u,pch=NA, pch=3, col="blue", xlab="P, N", ylab="u, mm")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=23,startCol=7,endCol=8)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA, pch=3, col="blue", xlab="P, N", ylab="u, mm")
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+points(P[1:5],u[1:5], pch=3)
+points(P[1:5],u[1:5], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+plot(P,u,pch=NA)
+points(P[1:5],u[1:5], pch=3, col="blue", xlab="P, N", ylab="u, mm")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=23,startCol=7,endCol=8)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P
+ure=u
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=23,startCol=7,endCol=8)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+#points(P[1:5],u[1:5], pch=3)
+Pre=P
+ure=u
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=28,startCol=10,endCol=11)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P
+ure=u
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c[4]=fit$coefficients[2]*10^(-3)
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=23,startCol=10,endCol=11)
+P<-dati$P..N
+u<-dati$u..mm
+points(P[1:5],u[1:5], pch=3)
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P[6:10]
+ure=u[6:10]
+fit<-lm(ure~Pre)
+points(Pre,ure,col="red")
+abline(fit,col="red")
+c[4]=fit$coefficients[2]*10^(-3)
+dc[4]<-summary(fit)$coefficients[2,2]
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-11,endRow=28,startCol=13,endCol=14)
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+Pre=P
+ure=u
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c[4]=fit$coefficients[2]*10^(-3)
+dc[4]<-summary(fit)$coefficients[2,2]
+source('~/Labori dažādi/Nep_vide/Sabruksana/Sabr.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/Sabruksana/Sabr.R', echo=TRUE)
+l=c(5,10,15,20,25)
+plot(l,c)
+fit<-lm(c~l+l^2)
+fit
+fit<-lm(c~I(l)+I(l^2))
+fit
+abline(fit)
+fit<-lm(c~poly(2))
+fit<-lm(c~poly(l,2))
+abline(fit)
+abline(fit,col='red')
+fit
+poly(l,2)
+fit<-lm(c~poly(l,3))
+fit
+fit<-lm(c~l+I(l^2))
+fit
+abline(fit,col='red')
+summary(fit)
+lines(fit$fitted.values)
+lines(l,fit$fitted.values)
+lines(l,fit$fitted.values,col='red')
+plot(l,c)
+indx=seq(4,25)
+fit<-lm(c~l+I(l^2))
+lines(l,fit$fitted.values,col='red')
+fit1<-lm(c~poly(l,2))
+lines(l,fit1$fitted.values,col='red')
+lines(l,fit1$fitted.values,col='blue')
+fit
+fit
+fit1
+lines(l,fit1$fitted.values,col='blue')
+fit<-lm(c~l+I(l^2)+I(l^3))
+lines(l,fit1$fitted.values,col='blue')
+fit<-lm(c~l+I(l^2)+I(l^3))
+lines(l,fit1$fitted.values,col='blue')
+lines(l,fit$fitted.values,col='red')
+summary(fit)
+poly(l,1)
+l=c(5,10,15,20,25)
+plot(l,c)
+indx=seq(4,25)
+fit<-lm(c~l+I(l^2))
+#fit1<-lm(c~poly(l,2))
+lines(l,fit$fitted.values,col='red')
+library(polynom)
+polynomial(coef = c(0, 1))
+polynomial(coef = c(0, 1))
+polynomial(coef = c(0, 1,2))
+polynomial(coef = c(0, 1,2,6))
+polynomial(coef = c(0, 1, 2, 6,10))
+polynomial(coef = c(5, 1, 2, 6,10))
+fit$coefficients
+polynomial(coef = c(fit$coefficients))
+hg<-polynomial(coef = c(fit$coefficients))
+hg
+hg[1]
+hg[2]
+hg[3]
+hg[3]+1
+hg[3]+2
+hg[3]+1e-11
+lines(hg)
+lines(hg,col='blue')
+f_l=deriv(c_fun)
+c_fun<-polynomial(coef = c(fit$coefficients))
+f_l=deriv(c_fun)
+plot(f_l)
+plot(l,f_l)
+f_l
+plot(f_l,xlim=c(l[1],l[2]))
+arrows(l,c-dc, l, c+cd,code=3,length=0.02,angle=90)
+arrows(l,c-dc, l, c+dc,code=3,length=0.02,angle=90)
+plot(l,c)
+arrows(l,c-dc, l, c+dc,code=3,length=0.02,angle=90)
+indx=seq(4,25)
+fit<-lm(c~l+I(l^2))
+lines(l,fit$fitted.values,col='red')
+c
+dc
+P<-dati$P..N
+u<-dati$u..mm
+plot(P,u,pch=NA, col="blue", xlab="P, N", ylab="u, mm")
+#points(P[1:5],u[1:5], pch=3)
+Pre=P
+ure=u
+points(Pre,ure,col="red")
+fit<-lm(ure~Pre)
+abline(fit,col="red")
+c[5]=fit$coefficients[2]*10^(-3)
+dc[5]<-summary(fit)$coefficients[2,2]
+fit
+summary(fit)
+source('~/Labori dažādi/Nep_vide/Sabruksana/Sabr.R', echo=TRUE)
+plot(l,c)
+arrows(l,c-dc, l, c+dc,code=3,length=0.02,angle=90)
+indx=seq(4,25)
+<-lm(c~l+I(l^2))
+fit<-lm(c~l+I(l^2))
+lines(l,fit$fitted.values,col='red')
+f_l(1)
+f_l*1
+f_l*2
+predict(f_l)
+predict(f_l,2)
+plot(f_l,xlim=c(l[1],l[2]))
+predict(f_l,10)
+predict(f_l,7)
+plot(f_l,xlim=c(l[1],l[5]))
+f_l0<-predict(f_l,25)
+f_l0
+P=758.9
+b=5.75*10^-3
+f_l0<-predict(f_l,25)
+G=P^2/(2*b)*f_l0
+G
+f_l0
+fit
+l=c(5,10,15,20,25)*10^-3
+plot(l,c)
+arrows(l,c-dc, l, c+dc,code=3,length=0.02,angle=90)
+indx=seq(4,25)
+fit<-lm(c~l+I(l^2))
+fit
+lines(l,fit$fitted.values,col='red')
+c_fun<-polynomial(coef = c(fit$coefficients))
+f_l=deriv(c_fun)
+plot(f_l,xlim=c(l[1],l[5]))
+f_l0
+f_l0<-predict(f_l,25)
+f_l0
+f_l0<-predict(f_l,0.025)
+f_l0
+l=c(5,10,15,20,25)
+plot(l,c)
+arrows(l,c-dc, l, c+dc,code=3,length=0.02,angle=90)
+indx=seq(4,25)
+fit<-lm(c~l+I(l^2))
+#fit1<-lm(c~poly(l,2))
+lines(l,fit$fitted.values,col='red')
+c_fun<-polynomial(coef = c(fit$coefficients))
+f_l=deriv(c_fun)
+plot(l,c,xlab="l, mm", ylab="c, m/N")
+arrows(l,c-dc, l, c+dc,code=3,length=0.02,angle=90)
+indx=seq(4,25)
+fit<-lm(c~l+I(l^2))
+lines(l,fit$fitted.values,col='red')
+c_fun<-polynomial(coef = c(fit$coefficients))
+f_l=deriv(c_fun)
+plot(f_l,xlim=c(l[1],l[5]))
+P=758.9
+b=5.75*10^-3
+f_l0<-predict(f_l,25)*10^3 #jo rekinats ir mm
+G=P^2/(2*b)*f_l0
+G
+Kc=sqrt(E*G/(1-ni^2))
+E=3300
+G=P^2/(2*b)*f_l0
+Kc=sqrt(E*G/(1-ni^2))
+ni=0.35 #Puasona koef
+G=P^2/(2*b)*f_l0
+E=3300
+Kc=sqrt(E*G/(1-ni^2))
+Kc
+ni=0.4 #Puasona koef
+E=3300
+G=P^2/(2*b)*f_l0
+Kc=sqrt(E*G/(1-ni^2))
+Kc
+ni=0.35 #Puasona koef
+E=3300
+G=P^2/(2*b)*f_l0
+Kc=sqrt(E*G/(1-ni^2))

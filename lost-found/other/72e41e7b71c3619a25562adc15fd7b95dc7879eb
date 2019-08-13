@@ -1,0 +1,50 @@
+#Pb
+#l_Pb=c(0,6,10,16,26,36,46)
+#N_Pb=c(2217,17,7)
+#ln_Pb=log(N_Pb/60)
+#svari_Pb=1/N_Sr*sqrt(N_Pb)
+#fit_Pb<-lm(ln_Pb~l_Pb,weights=1/svari_Pb^2)
+#plot(l_Pb,ln_Pb)
+#lines(l_Pb,fit_Pb$fitted.values)
+
+#Terauds
+l_Te=c(0,5,10)
+N_Te=c(43,11,6)
+ln_Te=log(N_Te/60)
+svari_Te=1/N_Te*sqrt(N_Te)
+fit_Te<-lm(ln_Te~l_Te,weights=1/svari_Te^2)
+plot(l_Te,ln_Te)
+lines(l_Te,fit_Te$fitted.values)
+
+#Aluminijs
+l_Al=c(0,5,10,15,25)
+N_Al=c(43,10, 13, 7, 8)
+ln_Al=log(N_Al/60)
+svari_Al=1/N_Al*sqrt(N_Al)
+fit_Al<-lm(ln_Al~l_Al,weights=1/svari_Al^2)
+plot(l_Al,ln_Al)
+lines(l_Al,fit_Al$fitted.values)
+
+#Stikls
+l_St=c(0,5,10,15,25,35,45)
+N_St=c(43,25,27,19,20,16,17)
+ln_St=log(N_St/60)
+svari_St=1/sqrt(N_St)
+fit_St<-lm(ln_St~l_St,weights=1/svari_St^2)
+#plot(l_St,ln_Pl)
+#lines(l_Pl,fit_Pl$fitted.values)
+
+#Betons
+l_Be=c(0,5,10,15)
+N_Be=c(43,15,11,7)
+ln_Be=log(N_Be/60)
+svari_Be=1/sqrt(N_Be)
+fit_Be<-lm(ln_Be~l_Be,weights=1/svari_Be^2)
+
+
+mu=c(0.217 ,0.080, 0.0203, 0.130) 
+rho<-c(7.68, 2.7, 1.39, 1.87)
+Dmu<-c(0.040, 0.029, 0.0056, 0.024)
+
+Rez=mu/rho
+DRez=Dmu/rho

@@ -1,0 +1,39 @@
+n=0:5
+#pi/180*
+fi<-(0+22.5*n)
+E=c(658.1,649.4,651.9,359.4,278.1,228.8)
+E_2<-c(206.6,207.2,204.6,153.3,146.2)
+
+
+#konstantes
+c<-2.99*10^8
+h<-4.1357*10^-15
+e<-1.6*10^-19
+m<-9.1*10^-31
+
+lam<-c*h/E*10^-3
+dlam<-lam-lam[1]
+lam2<-c*h/E_2*10^-3
+dlam2<-lam2-lam2[1]
+
+Lam<-h/(m*c)*e
+dlam_teor<-Lam*(1-cos(fi/57.3))
+ddlam<-1*10^-13
+
+#zîmçjam
+title <- as.list(expression(paste("1.Attçls. Viïòa garuma novirze Cs-137 661 keV un 206 keV pîíiem (",Delta,lambda*")")))
+title2 <- as.list(expression(paste("atkarîbâ no izkliedes leòía (",phi*").")))
+
+png("1.attçls.png", width=800, height=400,pointsize=20)
+par(mar = c(6, 4.2, 1, 2))
+plot(fi,dlam*10^12,cex=1.5,pch=1,xlab=expression(paste(phi*","^o)),ylab=expression(paste(Delta,lambda*", pm")))
+points(fi[1:5],dlam2*10^12,pch=4,cex=1.5,col="red")
+curve(Lam*10^12*(1-cos(x/57.3)),0,120,add=TRUE)
+mtext(do.call(expression, title ),side=1, line = 4 , cex = 1 ) 
+mtext(do.call(expression, title2 ),side=1, line = 5 , cex = 1 ) 
+#arrows(fi,dlam-ddlam,fi,dlam+ddlam,code=3,length=0.02,angle=90)
+legend("topleft",legend=c("661keV pîíis","206 keV pîíis","y=h/(mc)*(1-cos(fi))"),pch=c(1,4,NA),lwd=c(NA,NA,1),col=c("black","red","black"))
+dev.off()
+
+dati<-data.frame(lam,c(lam2,1))
+write.table(dati,"dati_d.dat",sep="\t",row.names=FALSE)

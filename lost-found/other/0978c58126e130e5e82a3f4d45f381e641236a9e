@@ -1,0 +1,109 @@
+dlam_teor
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+dlam_teor
+dlam2
+(1-cos(fi))
+180/pi
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+dlam_teor
+dlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+dlam
+dlam2
+dlam_teor
+plot(fi,dlam)
+points(fi,dlam2,col="red")
+points(fi[1:5],dlam2,col="red")
+points(fi[1:5],dlam_teor,col="green")
+points(fi,dlam_teor,col="green")
+points(fi,dlam_teor,lty=1)
+points(fi,dlam_teor,col="green",pch=0)
+points(fi,dlam_teor,col="green",pch=7)
+lines(fi,dlam_teor)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+curve(lam*(1-cos(x*57.3)))
+x
+curve(y=lam*(1-cos(x*57.3)))
+curve(lam*(1-cos(x*57.3)),0,1)
+curve((1-cos(x*57.3)),0,1)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+curve((1-cos(x/57.3)),0,1)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+curve((1-cos(x/57.3)),0,100,add=TRUE)
+curve(lam[1](1-cos(x/57.3)),0,100,add=TRUE)
+curve(lam[1]*(1-cos(x/57.3)),0,100,add=TRUE)
+curve(Lam*(1-cos(x/57.3)),0,100,add=TRUE)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+ddlam
+dlam
+0.1*dlam
+ddlam<-0.1*dlam
+ddlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+ddlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+ddlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+ddlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+ddlam
+dlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+dlam2
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+plot(E,fi)
+plot(E,fi,pch=2)
+plot(E,fi,pch=1)
+plot(E,fi,pch=0)
+plot(E,fi,pch=4)
+plot(E,fi,pch=3)
+plot(E,fi,pch=6)
+plot(E,fi,pch=7)
+plot(E,fi,pch=8)
+plot(E,fi,pch=9)
+plot(E,fi,pch=10)
+plot(E,fi,pch=11)
+plot(E,fi,pch=12)
+plot(E,fi,pch=13)
+plot(E,fi,pch=14)
+plot(E,fi,pch=15)
+plot(E,fi,pch=16)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+plot(E,fi,pch=16)
+dati<-data.frame(n,fi,E,E_2)
+dati<-data.frame(n,fi,E,c(E_2,1)
+)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+lam
+dlam
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+lam

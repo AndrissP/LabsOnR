@@ -1,0 +1,512 @@
+as.numeric(coef(fit)[2])
+as.numeric(coef(fit)[3])
+as.numeric(coef(fit)[4])
+as.numeric(coef(fit)[5])
+a1=as.numeric(coef(fit)[1]
+a2=as.numeric(coef(fit)[2]
+a2=as.numeric(coef(fit)[2])
+a3=as.numeric(coef(fit)[3])
+a4=as.numeric(coef(fit)[4])
+50*a4
+50*a3
+50*a2
+50*a1
+a1=as.numeric(coef(fit)[1])
+a2=as.numeric(coef(fit)[2])
+50*a2
+50*a1
+-69.6+a1+0.21
+2500*a2
+2500*a3
+50^2*a3
+50^3*a4
+-69.6+a1+10.9+11.9
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+rat(50)
+length(ex1 <- expression(1 + 0:9))
+ex1
+eval(ex1)
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+rat(50)
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+rat(5)
+x
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+rat(1)
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+rat(50)
+a1+5*a2+5^2*a3+5^3*a4
+a1
+a2
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+rat(50)
+rat(55)
+rat(60)
+min<-optimize(rat, interval=c(40, 80))
+min
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+min
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+min
+summary(min)
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+?atop
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+min
+tan(55.148)
+tan(radians(55.148)
+)
+tan(0.0174532925*55.148)
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+summary(fit)
+summary(fit_2)
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+source('~/Labori dažādi/Optika/Brūstera/Brsuteris.R')
+summary(fit)
+r=3.702/15.65+3.705/0.2124+1.225e-02/-1.158e-01
+r
+55,148*0,05
+55.148*0.05
+cos(1)
+=2*pi
+2*pi
+2*pi/360
+cos(0.01745*55.148)
+cos^2(0.01745*55.148)
+cos(0.01745*55.148)^2
+r=3.702/15.65+3.705/0.2124+1.225e-02/-1.158e-01
+r
+r*57
+r=sqrt(3.702/15.65^2+3.705/0.2124^2+1.225e-02/-1.158e-01^2)
+r
+r*55.14
+2*pi/360
+min
+tan(55,15*0.0174)
+tan(55.15*0.0174)
+tan(56.15*0.0174)
+tan(60.15*0.0174)
+getwd()
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+getwd()
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+head(dati)
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+head(dati)
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+sd_f
+mean_f
+head(f)
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+mean_f
+sd_f
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+d
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+d
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+d
+sd_d
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+sd_d
+mean_f
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+fg
+f
+mean_f
+d
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+err_f<-sqrt(((1-e^2/c^2)*d)^2+(e/c*d)^2)
+err_f
+(1-e^2/c^2)*d)
+(1-e^2/c^2)*d
+(e/c*d)
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+rez_1
+sist_f<-sqrt(((1-e^2/c^2)*d)^2+(e/c*d)^2)
+sist_f
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+mean(err_f)
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+head(dati)
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+f
+mean(f)
+a2-a1
+a1^2/(a2-a1)
+a1^2/(a2-a1)^2
+a1
+a2^2/(a2-a1)^2
+sd_f
+source('~/Labori dažādi/Optika/Lēcas/Lecas.r')
+err_f
+df
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+beta
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha
+alpha*70
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alhpa
+alpha
+alpha*7
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+bok/7
+alph
+alpha
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+AB
+AN*7
+AB*7
+AB
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+A
+u
+u*55.3
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+u*55.3
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+A
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+1.8*10^6/0.31
+koef<-5806452
+koef*A
+u
+u*360/2/pi
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+alpha3
+alpha3+alpha2
+alpha3+alpha4
+alpha3+alpha4+2
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nteor
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+tan(0.005)
+Nteor*10^9
+180/pi
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+alp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+alp
+cbind(alp5,alp4,alp3)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+alp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+Nteor
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nteor
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nteor
+alp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nteor
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+getwd()
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+beta
+teor
+?write
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+getwd()
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+bok
+AB
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+u
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+du
+u
+r
+sd(u)
+mean(du)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+mean(du)
+u_m
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+dN
+dalp
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+dalp
+Nexp
+Nteor
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+?curve
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Optiskā aktivitāte/Vielas_opt_akt.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+getwd()
+1/Nteor
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dd
+Nexp
+d
+d/Nexp
+d
+dd
+dN
+dN/Nexp
+dN/Nexp^2
+dalp
+dd
+plot(d,pch=4)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+mean(u)
+du
+r
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+arctg(0.222)
+atan(0.222)
+summary(fit)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+du
+1/(1+u_vid^2)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+Nexp
+d
+getwd()
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+N
+Nexp
+dalp
+dalp
+1.22*lam*k
+1.22*lam*k*10^3
+1.22*lam*k*10^-3
+f*tan(alp)
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+dN
+cos(alp)
+alp
+0.003/0,222
+0.003/0.222
+summary(fit)
+plot(a,S2)
+u_vid
+0.003/0,219
+0.003/0.219
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+source('~/Labori dažādi/Optika/Izšķiršanas spēja/Izskirsanas.R')
+0.003/0.218

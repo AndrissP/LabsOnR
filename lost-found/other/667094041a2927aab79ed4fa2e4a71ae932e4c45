@@ -1,0 +1,66 @@
+l<-c(42.6,62.75,73.4,84.30,102.10)
+Nmin<-c(24,43,51,61,55)
+N<-Nmin/15
+dN<-1/15
+#rçíina
+
+a=20
+r=sqrt(l^2+a^2) #mm
+Z1=13
+sin=a/r
+grrad=57.29578
+th=2*asin(sin)*grrad
+
+arg=1/(sin^4*r^2)
+
+#zîmçt
+png("1.attçls.png", width=800, height=400,pointsize=20)
+par(mar = c(5, 4.3, 1, 2))
+title_1 <- as.list(expression(paste("2.Attçls. Izkliedçto daïiòu skaits minûtç dotajâ virzienâ")))
+plot(arg,N,xlab=expression("1/(sin"^4*"*r"^2*"), mm"^-2),ylab=expression(paste(Delta*"n/t, min"^-1)))
+mtext(do.call(expression, title_1 ),side=1, line = 4  ) 
+dev.off()
+
+title <- as.list(expression(paste("2.Attçls. Izkliedçto daïiòu skaits minûtç dotajâ virzienâ, izòemot pçdçjo punktu.")))
+
+fit<-lm(N[1:4]~arg[1:4])
+png("2.attçls.png", width=800, height=400,pointsize=20)
+par(mar = c(5, 4.3, 1, 2))
+plot(arg[1:4],N[1:4],xlab=expression("1/(sin"^4*"*r"^2*"), mm"^-2),ylab=expression(paste(Delta*"n/t, min"^-1)))
+lines(arg[1:4],fit$fitted.values,lwd=2)
+arrows(arg,N-dN,arg,N+dN,code=3,length=0.02,angle=90)
+mtext(do.call(expression, title ),side=1, line = 4) 
+dev.off()
+
+d=1.5*10^-6
+d_al=8.0*10^-6
+Z=79
+Z_al=13
+
+l_al=c(40.85, 96.95)
+Nm_al=c(3, 6)
+N_al<-Nm_al/20
+
+r_al=sqrt(l_al^2+a^2) #mm
+arg_al=r_al^2/a^4
+#plot(arg_al,N_al)
+fit_al<-lm(N_al~arg_al)
+
+
+#salîdzinam
+N_au<-0.69+73.92*arg_al
+
+dZ2<-c(d_al*Z_al^2,d*Z^2)
+N_1<-c(N_al[1],N_au[1])
+N_2<-c(N_al[2],N_au[2])
+#plot(dZ2,N_1)
+#fit<-lm(N_1~0+dZ2)
+#lines(dZ2,fit$fitted.values,lwd=2)
+
+#attiecîbas
+Nalau<-N_al/N_au
+Zalau<-d_al/d*(Z_al/Z)^2
+
+#kïûdas
+dNal=1/20
+dNN<-sqrt((dNal/N_al)^2+(dN/N_au)^2)

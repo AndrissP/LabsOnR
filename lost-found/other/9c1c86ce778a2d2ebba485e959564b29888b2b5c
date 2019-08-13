@@ -1,0 +1,512 @@
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+Kludas<-c(summary(fit1)$coefficients[,2],summary(fit2)$coefficients[,2])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:7000],da2$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+plot(time2[1:7000],da1$mean[1:7000])
+plot(time2[1:70],da1$mean[1:70])
+plot(time2[1:70],da2$mean[1:70])
+abline(fit1)
+plot(time2[1:70],da1$mean[1:70])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+eta=c(0.89)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(0.75)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+save_rate=7.59*2
+x=Dati$V1 #[1500:2500]
+y=Dati$V2 #[1500:2500]
+x[x==0]='NA'
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+time<-(0:n)/save_rate
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+#plot(y)
+n=length(x)-1
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(0.75)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D
+D_koef
+D_koef2
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x=Dati$V1 [1500:2500]
+x=Dati$V1 [500:2500]
+x[x==0]='NA'
+y=Dati$V2 [500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+D
+plot(time2[1:7000],da1$mean[1:7000])
+D_koef<-fit2$coefficients[2]/(2*N_dim)*10^-12
+plot(y)
+plot(time2[1:70],da1$mean[1:70])
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Strāvas/")
+library("XLConnect")
+library(bbmle) #max likelihood
+n=138
+mu0=4*pi*10^-7
+N=1137 #vij/m
+D=0.088
+S=pi*(D/22)^2
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+dati<-readWorksheetFromFile("merijumi.xlsx,sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+z<-dati$x
+U<-dati$Usens
+dfi<-dati$dfi
+f=897.6
+ISp=0.701
+B=U/(S*n*2*pi*f)*10^-3
+Iy=2*B/mu0/ISp
+dati
+)
+)
+dati<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+head(dati)
+I1A=U_s/(I_sp*N)
+z<-dati$z..cm
+I_sp<-dati$I.sp..mA
+U_s<-dati$U_sens..mV
+I1A=U_s/(I_sp*N)
+Sm=(2.3)*10^(-3)*(26.5)*10^(-3)
+U1a=U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+f=47.71*10^3
+z<-dati$z..cm
+I_sp<-dati$I.sp..mA
+U_s<-dati$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+plot(z,Bsp)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+plot(z,Bsp)
+Nm=138 #sensora vijumu sk
+Sm=(2.3)*10^(-3)*(26.5)*10^(-3)
+mu0=4*pi*10^-7
+N=1137 #vij/m
+D=0.088
+S=pi*(D/22)^2
+dati<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+f=47.71*10^3
+z<-dati$z..cm
+I_sp<-dati$I.sp..mA
+U_s<-dati$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+plot(z,Bsp)
+dati<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+f=47.71*10^3
+z<-dati$z..cm
+I_sp<-dati$I.sp..mA
+U_s<-dati$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-22,endRow=35,startCol=2,endCol=4)
+f=47.71*10^3
+z2<-dati2$z..cm
+I_sp<-dati2$I.sp..mA
+U_s<-dati2$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp2=U1a/(2*pi*f*Sm*Nm)
+plot(z2,Bsp2)
+dati3<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-37,endRow=51,startCol=2,endCol=4)
+f=47.71*10^3
+z3<-dati2$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp3=U1a/(2*pi*f*Sm*Nm)
+plot(z3,Bsp3)
+z3<-dati2$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+z3<-dati3$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp3=U1a/(2*pi*f*Sm*Nm)
+plot(z3,Bsp3)
+U_s
+U1a=0.001*U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-22,endRow=35,startCol=2,endCol=4)
+f=47.71*10^3
+z2<-dati2$z..cm
+I_sp<-dati2$I.sp..mA
+U_s<-dati2$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp2=U1a/(2*pi*f*Sm*Nm)
+plot(z2,Bsp2)
+dati3<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-37,endRow=51,startCol=2,endCol=4)
+f=47.71*10^3
+z3<-dati3$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+U1a=U_s/(I_sp*N)
+Bsp3=U1a/(2*pi*f*Sm*Nm)
+plot(z3,Bsp3)
+dati3<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-37,endRow=51,startCol=2,endCol=4)
+f=47.71*10^3
+z3<-dati3$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp3=U1a/(2*pi*f*Sm*Nm)
+plot(z3,Bsp3)
+U_s
+Bsp=U_s/(2*pi*f*Sm*Nm)*10^-3
+Bsp
+Bsp=U_1a/(2*pi*f*Sm*Nm)*10^-3
+U1a=0.001*U_s/(I_sp*N)
+Bsp=U_1a/(2*pi*f*Sm*Nm)*10^-3
+points(z2,Bsp2)
+plot(z,Bsp)
+points(z2,Bsp2)
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Strāvas/")
+library("XLConnect")
+library(bbmle) #max likelihood
+Nm=138 #sensora vijumu sk
+Sm=(2.3)*10^(-3)*(26.5)*10^(-3)
+mu0=4*pi*10^-7
+N=1137 #vij/m
+D=0.088
+S=pi*(D/22)^2
+###############pirmais lineāls ##
+dati<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+f=47.71*10^3
+z<-dati$z..cm
+I_sp<-dati$I.sp..mA
+U_s<-dati$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)*10^-3
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-22,endRow=35,startCol=2,endCol=4)
+f=47.71*10^3
+z2<-dati2$z..cm
+I_sp<-dati2$I.sp..mA
+U_s<-dati2$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp2=U1a/(2*pi*f*Sm*Nm)
+dati3<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-37,endRow=51,startCol=2,endCol=4)
+f=47.71*10^3
+z3<-dati3$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp3=U1a/(2*pi*f*Sm*Nm)
+plot(z,Bsp)
+points(z2,Bsp2)
+Bsp2
+dati<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-7,endRow=20,startCol=2,endCol=4)
+f=47.71*10^3
+z<-dati$z..cm
+I_sp<-dati$I.sp..mA
+U_s<-dati$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp=U1a/(2*pi*f*Sm*Nm)
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-22,endRow=35,startCol=2,endCol=4)
+f=47.71*10^3
+z2<-dati2$z..cm
+I_sp<-dati2$I.sp..mA
+U_s<-dati2$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp2=U1a/(2*pi*f*Sm*Nm)
+dati3<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-37,endRow=51,startCol=2,endCol=4)
+f=47.71*10^3
+z3<-dati3$z..cm
+I_sp<-dati3$I.sp..mA
+U_s<-dati3$U_sens..mV
+U1a=0.001*U_s/(I_sp*N)
+Bsp3=U1a/(2*pi*f*Sm*Nm)
+plot(z,Bsp)
+points(z2,Bsp2)
+points(z3,Bsp3)
+plot(z,Bsp)
+points(z2,Bsp2,pch=2,col='green')
+points(z3,Bsp3,pch=3,col='blue')
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp,0.001A/m]*",  pT")))
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",legend=c(""),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",legend=c("n=0","n=12","n=12 (mainot asis)"),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=2,legend=c("n=0","n=12","n=12 (mainot asis)"),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=2,legend=c("n=0","n=12 (mainot asis),"n=12""),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=2,legend=c("n=0","n=12","(mainot asis)"),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=2,legend=c("n=0","n=12  (mainot asis) ","n=12"),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=2,legend=c("n=0","n=12(mainot asis)","n=12"),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2,3), col=c("black", "green",'blue'))
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2,3), col=c("black", "green",'blue'))
+legend("topleft",ncol=1,legend=c("n=12 (x=-x)"),pch=c(1,2), col=c("black", "green"))
+legend("topleft",ncol=1,legend=c("n=12 (mainot asi)"),pch=c(1,2), col=c("black", "green"))
+legend(c(6,350),ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(c(6,350),ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6,350,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(7,370,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6.2,370,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6.2,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(6.2,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6.4,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6.5,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6.6,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+legend(6.7,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(6.7,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(6.6,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(6.65,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+dati1<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-55,endRow=60,startCol=2,endCol=8)
+dati1
+Kef=dati1$Col7
+Kef
+dati1<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-55,endRow=60,startCol=2,endCol=8)
+N = dati1$sprauga
+U1a = dati1$U..1A..V
+Kef=dati1$Col7
+plot(N,Nef)
+plot(N,Kef)
+dati1
+dati1<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-55,endRow=60,startCol=2,endCol=9)
+N = dati1$sprauga
+U1a = dati1$U..1A..V
+Kef=dati1$Col8
+plot(N,Kef)
+fit1=lm(Kef~0+N)
+abline(fit1)
+fit1
+fit1=lm(Kef~0+I(N))
+abline(fit1)
+fit1
+Kef
+N
+N = c(2,6,12,48)
+U1a = dati1$U..1A..V
+Kef=dati1$Col8
+plot(N,Kef)
+Kef=dati1$Col8[2:5]
+plot(N,Kef)
+fit1=lm(Kef~0+I(N))
+abline(fit1)
+fit1
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-66,endRow=70,startCol=2,endCol=9)
+Kef=dati1$Col8[2:5]
+plot(N,Kef)
+fit1=lm(Kef~0+I(N))
+abline(fit1)
+Kef=dati2$Col8[2:5]
+plot(N,Kef)
+N
+Kef
+dati2
+Kef=dati2$Col8[2:5]
+Kef
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-65,endRow=70,startCol=2,endCol=9)
+Kef=dati2$Col8[2:5]
+plot(N,Kef)
+fit1=lm(Kef~0+I(N))
+abline(fit1)
+koef=c(fit1$coefficients)
+koef=c(fit1$coefficients,fit2$coef)
+fit2=lm(Kef~0+I(N))
+abline(fit2)
+koef=c(fit1$coefficients,fit2$coef)
+koef
+dati1<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-55,endRow=60,startCol=2,endCol=9)
+N = c(2,6,12,48)
+U1a = dati1$U..1A..V
+Kef=dati1$Col8[2:5]
+plot(N,Kef)
+fit1=lm(Kef~0+I(N))
+abline(fit1)
+dati2<-readWorksheetFromFile("merijumi.xlsx",sheet=1,startRow<-65,endRow=70,startCol=2,endCol=9)
+Kef=dati2$Col8[2:5]
+plot(N,Kef)
+fit2=lm(Kef~0+I(N))
+abline(fit2)
+koef=c(fit1$coef,fit2$coef)
+koef=c(fit1$coef,fit2$coef)
+H=0.04
+b=0.005 #sieniņas biezums
+R=0.035 #tīģeļa iekš R
+d_ef=koef*(b*pi*R^2)/H^2
+d_ef
+png("1att.png", width=800, height=400,pointsize=20)
+par(mar = c(4.5, 4, 1, 2), cex=1.1, lwd=2)
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(6.65,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+dev.off()
+png("1att.png", width=800, height=400,pointsize=20)
+par(mar = c(4.5, 4.2, 1, 2), cex=1.1, lwd=2)
+plot(z,Bsp*10^12,xlab='z,cm',ylab=expression(paste(B[sp_0.001A/m]*",  pT")))
+points(z2,Bsp2*10^12,pch=2,col='green')
+points(z3,Bsp3*10^12,pch=3,col='blue')
+legend("topleft",ncol=2,legend=c("n=0","n=12"),pch=c(1,2), col=c("black", "green"))
+legend(6.65,380,ncol=1,legend=c("n=12 (mainot asi)"),pch=c(3), col=c("blue"))
+dev.off()

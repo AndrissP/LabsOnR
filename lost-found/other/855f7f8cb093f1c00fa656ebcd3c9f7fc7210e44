@@ -1,0 +1,512 @@
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+#plot(y)
+n=length(x)-1
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(0.75)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D
+D_koef
+D_koef2
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x=Dati$V1 [1500:2500]
+x=Dati$V1 [500:2500]
+x[x==0]='NA'
+y=Dati$V2 [500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+D
+plot(time2[1:7000],da1$mean[1:7000])
+D_koef<-fit2$coefficients[2]/(2*N_dim)*10^-12
+plot(y)
+plot(time2[1:70],da1$mean[1:70])
+a=c(-4,-2,0,0,2)
+b=c(-2,-1,-1,1,1)
+mean(a)
+mean(b)
+sd(a)
+sd(a)^2
+sd(a)^2*25
+sd(b)^2*25
+summary(a)
+sum((a-mean(a))^2)
+sum((a-mean(a))^2)/5
+sum((a-mean(a))^2)*5
+?sd
+sd(1:2)^2
+sd(1:2)
+0.5^2
+sum((a-mean(a))^2)
+sum((a-mean(a))^2)/4
+sum((a-mean(a))^2)/4*25
+cov(a,b)
+cor(a,b)
+?cor
+var(a,b)
+var(a,b)*25
+var(a,b)*125
+var(a)
+var(a,b)
+var(a)*25
+var(a)*25/5*4
+a-mean(a)
+(a-mean(a))(b-mean(b))
+(a-mean(a))*(b-mean(b))
+sum((a-mean(a))*(b-mean(b)))
+sum((a-mean(a))*(b-mean(b)))*25
+(a-mean(a))*(b-mean(b))*25
+(a-mean(a))*(b-mean(b))*5
+sum((a-mean(a))*(b-mean(b)))*5
+sqrt(104*36)
+52/sqrt(104*36)
+0.85*6
+0.85*6/sqrt(104)
+plot(a,b)
+plot(a,b)
+fit=lm(b~a)
+abline(fit)
+fit
+summary(fit)
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Turb/Uzulis_Potrebko/")
+library("XLConnect")
+library(bbmle) #max likelihood
+dati<-readWorksheetFromFile("dati.xlsx",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5)
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5)
+head(dati)
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5,colnames<-NaN)
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+head(dati)
+x<-dati$Col1
+uM<-dati$Col4
+RMS<-dati$Col5
+plot(x,uM)
+points(x, RMS)
+plot(x,uM)
+par(new=T)
+points(x, RMS)
+plot(x,uM)
+par(new=T)
+plot(x, RMS)
+plot(x, RMS,col='red')
+plot(x,uM)
+par(new=T)
+plot(x, RMS,col='red')
+axis(side = 4)
+plot(x,uM)
+par(new=T)
+plot(x, RMS,col='red')
+plot(x,uM)
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='red')
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x,uM)
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='red')
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],"m/s")))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='red')
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=1,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+x<-dati$Col1
+uM<-dati$Col4
+RMS<-dati$Col5
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='red')
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+x<-dati$Col1
+uM<-dati$Col4
+RMS<-dati$Col5
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=1,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+x<-dati$Col1
+uM<-dati$Col4
+RMS<-dati$Col5
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='red')
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+plot(x2,uM2,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+x2<-dati$Col1
+uM2<-dati$Col4
+RMS2<-dati$Col5
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=1,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+x<-dati$Col1
+uM<-dati$Col4
+RMS<-dati$Col5
+#
+# par(mar = c(4.5, 4.5, 3.4, 4))
+# plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+# par(new=T)
+# plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='red')
+# axis(side = 4)
+# mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+dati<-readWorksheetFromFile("sadalijums.xls",sheet=2,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+x2<-dati$Col1
+uM2<-dati$Col4
+RMS2<-dati$Col5
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x2,uM2,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x,uM)
+par(new=T)
+plot(x2, RMS2,ylab=NA,xlab=NA,axes=F, col='blue')
+points(x,uM,col='green')
+points(x,uM,col='green')
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+points(x,uM,col='green',cex=3)
+plot(x2,uM2,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+par(new=T)
+points(x,uM,col='green',cex=1)
+plot(x2,uM2,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x,uM, col='red')
+plot(x2, RMS2,ylab=NA,xlab=NA,axes=F, col='blue')
+plot(x2,uM2,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x,uM, col='red')
+par(new=T)
+plot(x2, RMS2,ylab=NA,xlab=NA,axes=F, col='blue')
+points(x,RMS,col='green',cex=1)
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+legend("bottom",legend=c('Al plāksne, sim, f=500Hz','Al folija, sim, f=100kHz'),col=c('red','blue'),lwd=1)
+max(uM)
+max(uM2)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+max(uM)
+legend("bottom",legend=c(expression(paste(U[M]," ("U[max]=13,1")")),'Al folija, sim, f=100kHz'),col=c('red','blue'),lwd=1)
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max]=,"13,1)")),'Al folija, sim, f=100kHz'),col=c('red','blue'),lwd=1)
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1)")),'Al folija, sim, f=100kHz'),col=c('red','blue'),lwd=1)
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x2,uM2, col='green')
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F)
+points(x2,RMS2,col='green',cex=1)
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x2,uM2, col='red')
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='blue')
+points(x2,RMS2,col='green',cex=1)
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1)")),'Al folija, sim, f=100kHz'),col=c('red','blue'),lwd=1)
+max(uM2)
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1)")),expression(paste(U[M]," (",U[max],"=9,22)"))),col=c('red','blue'),lwd=1)
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1 m/s)")),expression(paste(U[M]," (",U[max],"=9,22 m/s)"))),col=c('red','blue'),lwd=1)
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1 m/s)")),expression(paste(U[M]," (",U[max],"=9,22 m/s)")),expression(paste(U[RMS]," (",U[max],"=13,1 m/s)")),expression(paste(U[RMS]," (",U[max],"=9,22 m/s)"))),col=c('red','blue'),lwd=1)
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1 m/s)")),expression(paste(U[M]," (",U[max],"=9,22 m/s)")),expression(paste(U[RMS]," (",U[max],"=13,1 m/s)")),expression(paste(U[RMS]," (",U[max],"=9,22 m/s)"))),col=c('black','red','blue','green'),pch=1)
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Turb/")
+dati<-readWorksheetFromFile("Uzulis_Potrebko/sadalijums.xls",sheet=1,startRow<-1,endRow=141,startCol=1,endCol=5,header=FALSE)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+png("1att.png", width=700, height=600,pointsize=20)
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x2,uM2, col='red')
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='blue')
+points(x2,RMS2,col='green',cex=1)
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1 m/s)")),expression(paste(U[M]," (",U[max],"=9,22 m/s)")),expression(paste(U[RMS]," (",U[max],"=13,1 m/s)")),expression(paste(U[RMS]," (",U[max],"=9,22 m/s)"))),col=c('black','red','blue','green'),pch=1)
+dev.off()
+png("1att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(x,uM,xlab="x,cm", ylab=expression(paste(U[M],", m/s")))
+points(x2,uM2, col='red')
+par(new=T)
+plot(x, RMS,ylab=NA,xlab=NA,axes=F, col='blue')
+points(x2,RMS2,col='green',cex=1)
+axis(side = 4)
+mtext(side = 4, line = 3, expression(paste(U[RMS]*", m/s")))
+legend("bottom",legend=c(expression(paste(U[M]," (",U[max],"=13,1 m/s)")),expression(paste(U[M]," (",U[max],"=9,22 m/s)")),expression(paste(U[RMS]," (",U[max],"=13,1 m/s)")),expression(paste(U[RMS]," (",U[max],"=9,22 m/s)"))),col=c('black','red','blue','green'),pch=1)
+dev.off()
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Turb/")
+dati<-readWorksheetFromFile("zavickis_pavlovska/5.4_MS_SS.xls",sheet=5,startRow<-1,endRow=512,startCol=1,endCol=3)
+library("XLConnect")
+library("zoo")
+dati<-readWorksheetFromFile("zavickis_pavlovska/5.4_MS_SS.xls",sheet=5,startRow<-1,endRow=512,startCol=1,endCol=3)
+dati<-readWorksheetFromFile("zavickis_pavlovska/5.4_MS_SS.xls",sheet=5,startRow<-1,endRow=512,startCol=1,endCol=3,header=FALSE)
+x<-dati$Col1
+t<-dati$Col1
+u<-dati$Col3
+plot(t,u)
+newt=rollapply(t, width = 5, by = 5, FUN = mean, align = "left")
+newu=rollapply(u, width = 5, by = 5, FUN = mean, align = "left")
+plot(newr,newu)
+plot(newt,newu)
+plot(newt,newu,cex=0.2)
+lines(newt,newu)
+points(t,u,cex=0.5)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+source('~/.active-rstudio-document', encoding = 'UTF-8', echo=TRUE)
+lines(newt,newu, log=xy)
+lines(newt,newu, log='xy')
+plot(newt,newu,cex=0.2, log='xy')
+plot(newt,newu,cex=0.2, log='xy')
+lines(newt,newu)
+points(t,u,cex=0.5)
+dati<-readWorksheetFromFile("zavickis_pavlovska/5.4_MS_SS.xls",sheet=8,startRow<-1,endRow=512,startCol=1,endCol=3,header=FALSE)
+t<-dati$Col1
+u<-dati$Col3
+plot(t,u)
+newt=rollapply(t, width = 5, by = 5, FUN = mean, align = "left")
+newu=rollapply(u, width = 5, by = 5, FUN = mean, align = "left")
+plot(newt,newu,cex=0.2, log='xy')
+lines(newt,newu)
+plot(t,u,log='xy')
+plot(newt,newu,cex=0.2, log='xy')
+lines(newt,newu)
+points(t,u,cex=0.5)
+abline(a = 100,b=-5/3)
+abline(a = 100,b=-5/3,col='red')
+abline(a = 1,b=-5/3,col='red')
+abline(a = 10,b=-5/3,col='red')
+abline(a = 6,b=-5/3,col='red')
+lines(newt,newu)
+plot(newt,newu,cex=0.2, log='xy')
+abline(a = 6,b=-5/3,col='red')
+plot(newt,newu,cex=0.2)
+abline(a = 6,b=-5/3,col='red')
+abline(a = 7,b=-5/3,col='red')
+abline(a = 10,b=-5/3,col='red')
+abline(a = 100,b=-5/3,col='red')
+abline(a = 0,b=1,col='red')
+abline(a = 10,b=1,col='red')
+abline(a = 30,b=1,col='red')
+abline(a = 30,b=-5/4,col='red')
+abline(a = 30,b=-5/3,col='red')
+lines(x)
+lines(30-5/3*x)
+lines(30x^(-5/3))
+lines(30*x^(-5/3))
+lines(30*x^(-5/3))
+lines(30*x^(-5/3),cex=4)
+lines(1*x^(-5/3),cex=4)
+plot(newt,newu,cex=0.2)
+lines(newt,newu)
+points(t,u,cex=0.5)
+lines(1*x^(-5/3),cex=4)
+lines(100*x^(-5/3),cex=4)
+lines(1000*x^(-5/3),cex=4)
+lines(100000*x^(-5/3),cex=4)
+lines(10000*x^(-5/3),cex=4)
+lines(5000*x^(-5/3),cex=4)
+lines(9000*x^(-5/3),cex=4)
+lines(20000*x^(-5/3),cex=4)
+lines(50000*x^(-5/3),cex=4)
+plot(newt,newu,cex=0.2)
+lines(newt,newu)
+points(t,u,cex=0.5)
+plot(newt,newu,cex=0.2)
+plot(newt,newu,cex=0.2,log='xy')
+lines(newt,newu)
+points(t,u,cex=0.5)
+lines(50000*x^(-5/3),cex=4)
+lines(55000*x^(-5/3),cex=4)
+lines(60000*x^(-5/3),cex=4)
+lines(60000*x^(-5/3),cex=4,col='red')
+lines(60000*x^(-5/3),cex=10,col='red')
+lines(60000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu,cex=0.2,log='xy')
+lines(newt,newu)
+lines(60000*x^(-5/3),lwd=3,col='red')
+newt=rollapply(t, width = 10, by = 10, FUN = mean, align = "left")
+newu=rollapply(u, width = 10, by = 10, FUN = mean, align = "left")
+plot(newt,newu,cex=0.2,log='xy')
+lines(newt,newu)
+points(t,u,cex=0.5)
+lines(60000*x^(-5/3),lwd=3,col='red')
+newt=rollapply(t, width = 32, by = 32, FUN = mean, align = "left")
+newu=rollapply(u, width = 32, by = 32, FUN = mean, align = "left")
+plot(newt,newu,cex=0.2,log='xy')
+lines(newt,newu)
+points(t,u,cex=0.5)
+lines(60000*x^(-5/3),lwd=3,col='red')
+abline(a = 30,b=-5/3,col='red')
+lines(61000*x^(-5/3),lwd=3,col='red')
+lines(60000*x^(-5/3),lwd=3,col='red')
+points(t,u^2,cex=0.5)
+plot(newt,newu,cex=0.2,log='xy')
+plot(newt,newu^2,cex=0.2,log='xy')
+lines(newt,newu,xlab="f,Hz",ylab='E, J')
+points(t,u,cex=0.5)
+lines(60000*x^(-5/3),lwd=3,col='red')
+lines(120000*x^(-5/3),lwd=3,col='red')
+lines(200000*x^(-5/3),lwd=3,col='red')
+lines(400000*x^(-5/3),lwd=3,col='red')
+lines(500000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=0.2,log='xy')
+lines(newt,newu,xlab="f,Hz",ylab='E, J')
+points(t,u,cex=0.5)
+lines(500000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,log='xy')
+lines(500000*x^(-5/3),lwd=3,col='red')
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(t,u,log='xy')
+plot(newt,newu^2,cex=1,log='xy')
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(newt,newu^2,xlab="f,Hz",ylab='E, J')
+plot(newt,newu^2,cex=1,log='xy')
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(700000*x^(-5/3),lwd=3,col='red')
+source('~/Labori dažādi/Nep_vide/Turb/Spektrs.R', echo=TRUE)
+plot(t,u,log='xy')
+source('~/Labori dažādi/Nep_vide/Turb/Spektrs.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/Turb/Turb.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/Turb/Spektrs.R', echo=TRUE)
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(100000*x^(-5/3),lwd=3,col='red')
+lines(700000*x^(-5/3),lwd=3,col='red')
+newt=rollapply(t, width = 32, by = 32, FUN = mean, align = "left")
+newu=rollapply(u, width = 32, by = 32, FUN = mean, align = "left")
+x
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(t,u)
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(700000*x^(-5/3),lwd=3,col='red',xlim=c(20,500))
+plot(newt,newu,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(7000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,log='xy',xlab="f,Hz",ylab='E, J')
+lines(7000*x^(-5/3),lwd=3,col='red')
+lines(70000*x^(-5/3),lwd=3,col='red')
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(700000*x^(-5/3),lwd=3,col='red')
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+png("5att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(700000*x^(-5/3),lwd=,col='red')
+lines(700000*x^(-5/3),lwd=1,col='red')
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+dev.off()
+dev.off()
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+lines(700000*x^(-5/3),lwd=1,col='red')
+lines(700000*x^(-5/3),lwd=3,col='red')
+rm(x)
+x
+lines(700000*x^(-5/3),lwd=3,col='red')
+lines(700000*x^(-5/3),lwd=3,col='red')
+curve(700000*x^(-5/3),lwd=3,col='red')
+curve(700000*x^(-5/3),lwd=3,col='red',add=FALSE)
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+lines(newt,newu^2)
+curve(700000*x^(-5/3),lwd=3,col='red',add=TRUE)
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J')
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J',log='xy')
+lines(newt,newu^2)
+curve(700000*x^(-5/3),lwd=3,col='red',add=TRUE)
+png("5att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(newt,newu^2,cex=1,xlab="f,Hz",ylab='E, J',log='xy')
+lines(newt,newu^2)
+curve(700000*x^(-5/3),lwd=3,col='red',add=TRUE)
+dev.off()

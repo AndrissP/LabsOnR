@@ -1,0 +1,23 @@
+setwd("C:/Users/Andris/Documents/Labori daþâdi/Optika/interference")
+library("XLConnect")
+dati<-readWorksheetFromFile("Interference.xlsx",sheet=1,startRow<-2,endRow=15,startCol=4,endCol=11)
+a_0<-360
+a<-dati$a...1mm
+D<-dati$D_mean.mm
+k<-dati$k_mean
+lam<-dati$X.U.03BB....10.nm
+n<-1.5
+fi<-(lam*a*k/(2*a_0*D*(n-1))*10^-6)*57.29578*60
+m_fi<-mean(fi)
+sd_fi<-sd(fi)
+rlam<-10/lam
+dfi<-sqrt(sd(fi)^2+mean((rlam*fi))^2)
+fi1<-mean(fi[1:5])
+fi2<-mean(fi[6:9])
+fi3<-mean(fi[10:12])
+sd_fi1<-sd(fi[1:5])
+sd_fi2<-sd(fi[6:9])
+sd_fi3<-sd(fi[10:12])
+dfi1<-sqrt((sd_fi1)^2+mean(((rlam*fi)[1:5]))^2)
+dfi2<-sqrt((sd_fi2)^2+mean(((rlam*fi)[6:9]))^2)
+dfi3<-sqrt((sd_fi3)^2+mean(((rlam*fi)[10:12]))^2)

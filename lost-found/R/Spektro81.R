@@ -1,0 +1,63 @@
+setwd("~/Labori daþâdi/Spektro/Zemana")
+library("XLConnect")
+
+dati<-readWorksheetFromFile("Zemana_efekts.xlsx",sheet=1,startRow<-2,endRow=8,startCol=2,endCol=8)
+B<-dati$I..A*100
+S11<-dati$X2...mu.m.2
+S12<-dati$X2
+S21<-dati$X3
+S22<-dati$X3.1
+S31<-dati$X4
+S32<-dati$X4.1
+
+dati_delta<-data.frame(S11-S12,S21-S22,S31-S32)
+dati_Delta<-data.frame(S21-S11,S22-S12,S31-S21,S32-S22)
+delta<--rowMeans(dati_delta)
+Delta<-rowMeans(dati_Delta)
+ratio<-delta/Delta
+
+SD_delta<-apply(dati_delta,1,sd)
+SD_Delta<-apply(dati_Delta,1,sd)
+D_ratio<-sqrt((SD_delta/delta)^2+(SD_Delta/Delta)^2)*ratio
+
+fit<-lm(ratio~0+I(B),weights=1/(D_ratio)^2)
+
+png("1_attels.png", width=800, height=400,pointsize=20)
+par(mar = c(4.5, 4, 1, 2))
+plot(B,ratio,xlab='B,mT',ylab=expression(paste(delta*'/',Delta)),ylim=c(0.13,0.55))
+arrows(B,ratio-D_ratio,B,ratio+D_ratio,col='brown',code=3,length=0.02,angle=90)
+lines(B,fit$fitted.values)
+
+dev.off()
+mu = 1.456
+h = 6.63*10^-34
+c=2.99*10^8
+t=3*10^-3
+
+koef<-6.613e-04
+D_koef<-3.911e-05
+
+mu_B=koef*h*c/(2*mu*t)*10^3
+Dmu_B<-D_koef/koef*mu_B
+
+
+lambda<-643.847
+k=1/lambda*10^9
+Dnu=ratio/(2*mu*t)
+k1_new=(k-Dnu/2)*10^-6
+k2_new=(k+Dnu/2)*10^-6
+
+png("3_attels.png", width=800, height=400,pointsize=20)
+par(mar = c(4.5, 4, 1, 2))
+plot(B,k1_new,ylim=c(1.55313,1.55320),xlab='B,mT',ylab=expression(paste(Delta*"k*10^6, 1/m")))
+points(B,k2_new)
+dev.off()
+
+DDnu=D_ratio/(2*mu*t)
+
+library(xtable)
+result<-data.frame(B,round(data.frame(S11, S12, S21, S22,S31, S32),-3)/1000, round(delta,-2)/1000,round(Delta,-2)/1000,round(ratio,3),round(D_ratio,3))
+print(xtable(result,auto = TRUE), type="latex",file="1_tabula.tex", math.style.exponents = TRUE)
+result<-data.frame(B,round(Dnu,1),round(DDnu,1))
+print(xtable(result,auto = TRUE), type="latex",file="2_tabula.tex", math.style.exponents = TRUE)
+

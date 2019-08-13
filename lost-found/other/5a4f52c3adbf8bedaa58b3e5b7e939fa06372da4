@@ -1,0 +1,512 @@
+col=c(seq(1,8),6)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=0.5)
+}
+png("1att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 3.5, 3.4, 4))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),6)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+startCol=seq(1,19,3)
+pch=seq(1,9)
+col=c(seq(1,8),6)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+startCol=seq(1,19,3)
+pch=seq(1,7)
+col=c(seq(1,7))
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+png("1att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 3.5, 3.4, 4))
+startCol=(seq(1,19,3)
+pch=seq(1,7)
+col=c(seq(1,7))
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 3.5, 3.4, 4)
+startCol=(seq(1,19,3)
+pch=seq(1,7)
+col=c(seq(1,7))
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 3.5, 3.4, 4)
+startCol=(seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+input=data.frame(startCol,pch,col)
+startCol=(seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+ManiRe<-c(529.2877494, 1270.290598, 1587.863248, 2328.866097, 2540.581197, 793.931624, 3705.014245, 3069.868946)
+dati<-readWorksheetFromFile("Kalibrācijas līkne.xlsx",sheet=1,startRow<-76,endRow=89,startCol=7,endCol=8)
+Tu<-dati$Col1
+Re<-dati$Re
+png("2att.png", width=700, height=500,pointsize=20)
+par(mar = c(4.5, 4.5, 3.4, 4))
+plot(Re,Tu)
+dev.off()
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 3.5, 3.4, 4)
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 3.5, 3.4, 4))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 9.4, 4))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,8.5,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 9.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 6.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+png("1att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+plot(u)
+u[u<mean(u)/0.8]=NA
+plot(u)
+startCol=1
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.5]=NA
+plot(u)
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.5]=NA
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=0.5)
+}
+png("1att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+input=data.frame(startCol,pch,col)
+col=c(seq(1,8),7)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.2]=NA
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=0.5)
+}
+png("1att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.1]=NA
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=0.5)
+}
+png("1att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.1]=NA
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=0.9)
+}
+png("1att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.1]=NA
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=1)
+}
+png("1att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+u[u<mean(u)/1.1]=NA
+newx=rollapply(x, width = 10, by = 10, FUN = mean, align = "left")
+newu=rollapply(u, width = 10, by = 10, FUN = mean, align = "left")
+lines(newx,newu,col=col,cex=1)
+}
+png("12att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 10, by = 10, FUN = mean, align = "left")
+newu=rollapply(u, width = 10, by = 10, FUN = mean, align = "left")
+newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("12att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 10, by = 10, FUN = mean, align = "left")
+newu=rollapply(u, width = 10, by = 10, FUN = mean, align = "left")
+#  newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("12att.png", width=800, height=800,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 10, by = 10, FUN = mean, align = "left")
+newu=rollapply(u, width = 10, by = 10, FUN = mean, align = "left")
+#  newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("12att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+#
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+#  newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("12att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+#  newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 10, by = 10, FUN = mean, align = "left")
+newu=rollapply(u, width = 10, by = 10, FUN = mean, align = "left")
+#  newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("12att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+Read_data<-function(input){
+startCol=input[1]
+pch=input[2]
+col=input[3]
+dati<-readWorksheetFromFile("Andris_Užulis.xls",sheet=1,startRow<-3,endRow=1027,startCol=startCol,endCol=startCol+1)
+x<-dati$x
+u<-dati$u
+newx=rollapply(x, width = 1, by = 1, FUN = mean, align = "left")
+newu=rollapply(u, width = 1, by = 1, FUN = mean, align = "left")
+newu[newu<mean(newu)/1.1]=NA
+lines(newx,newu,col=col,cex=1)
+}
+png("1att.png", width=700, height=700,pointsize=20)
+par(mar = c(4.5, 4.5, 5.4, 1))
+startCol=seq(1,25,3)
+pch=seq(1,9)
+col=c(seq(1,8),7)
+input=data.frame(startCol,pch,col)
+plot(0,0,ylim=c(0,7),xlim=c(0,1),pch=NA,xlab="t,s", ylab="u, m/s")
+Rezult<-apply(input,1, function(input)Read_data(input))
+par(xpd=TRUE)
+legend(-0.05,9,ncol=3,legend=c('Re = 529', 'Re = 1270', 'Re = 1588', 'Re = 2329', 'Re = 2541',  'Re = 794', 'Re = 3705', 'Re = 3070' , 'Re=2117'),pch=NA,lty=1,col=col)
+dev.off()
+dati<-readWorksheetFromFile("Kalibrācijas līkne.xlsx",sheet=1,startRow<-76,endRow=89,startCol=7,endCol=8)
+Tu<-dati$Col1
+Re<-dati$Re
+dati
+dati<-readWorksheetFromFile("Kalibrācijas līkne.xlsx",sheet=1,startRow<-76,endRow=89,startCol=5,endCol=6)
+dati
+v<-dati$v.mean
+RMS<-dati$RMS
+v
+RMS
+0.304^2*0.75
+RMS^2*0,75
+RMS^2*0.75
+epsilon=k^(3/2)/0,1
+epsilon=k^(3/2)/0.1
+epsilon
+RMS<-dati$RMS
+k=RMS^2*0.75
+epsilon=k^(3/2)/0.1
+epsilon

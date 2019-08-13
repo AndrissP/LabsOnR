@@ -1,0 +1,55 @@
+rm(list=ls())
+setwd("~/Dokumenti/Labori/Optika/Absorbcija")
+library("XLConnect")
+dati<-readWorksheetFromFile("Absorbcija.xlsx",sheet=1,startRow<-2,endRow=13,endCol=6)
+dati_zils<-readWorksheetFromFile("Absorbcija.xlsx",sheet=1,startRow<-15,endRow=26,endCol=6)
+dati_dzelt<-readWorksheetFromFile("Absorbcija.xlsx",sheet=1,startRow<-29,endRow=40,endCol=6)
+dati_zals<-readWorksheetFromFile("Absorbcija.xlsx",sheet=1,startRow<-43,endRow=54,endCol=6)
+dati_c<-readWorksheetFromFile("Absorbcija.xlsx",sheet=1,startRow<-57,endRow=71,endCol=6)
+dati_h<-readWorksheetFromFile("Absorbcija.xlsx",sheet=1,startRow<-77,endRow=80,endCol=6)
+filt<-dati$Filtra.nr.
+lam<-dati$lambda..nm
+D_1<-dati$D.....0.01
+D_2<-dati$D.....0.01.1
+c<-dati$Col5
+h<-dati$h...0.01.mm
+D<-rowMeans(data.frame(D_1,D_2))
+T<-1/exp(D)
+dD=0.01
+dT<-1/exp(D)*dD
+png("1.Attlēls", width=700, height=500)
+par(mar = c(5, 5, 2, 3))
+plot(lam,D_1,cex=1.5, xlab=expression(paste(lambda,",nm")) , ylab="D", sub=expression("1.Attēls. Optiskā blīvuma atkarība no viļņa garuma K"[2]*"Cr"[2]*"O"[7]*"pie konstantas koncentrācijas un slāņa biezuma")  ,col="red")
+points(lam,D_2,col="brown",cex=1.5, pch=4)
+points(lam,D,col="blue",cex=1.5, pch=3)
+legend("topright",legend=c("D1 - paraugs pirmā stara ceļā","D2-paraugs otrā stara ceļā","D-vidējā vērtība"), pch=c(1,4,11),col=c("red","brown","blue"))
+dev.off()
+png("2.Attlēls", width=600, height=400)
+par(mar = c(5, 5, 1, 3))
+plot(lam,T,cex=1.5, xlab=expression(paste(lambda,",nm")) , ylab="T", sub=expression("2.Attēls. Optiskās caurlaidības atkarība no viļņa garuma K"[2]*"Cr"[2]*"O"[7]) ,col="red")
+arrows(lam, T-dT, lam, T+dT, length=0.05, angle=90, code=3)
+dev.off()
+
+zīmē<-function(dati,title, col){
+  filt<-dati$Filtra.nr.
+  lam<-dati$lambda..nm
+  D<-dati$D.....0.01
+  T=1/exp(D)
+  c<-dati$Col5
+  h<-dati$h...0.01.mm
+  png(title, width=700, height=350)
+  par(mar = c(5,5,2,5))
+  plot(lam,D,cex=1.5, xlab=expression(paste(lambda,",nm")) , ylab="D", sub=title ,col=col,pch=0)
+  par(new=TRUE)
+  plot(lam,T, axes=F,cex=1.5, xlab=NA, ylab=NA,pch=4, col="red3")
+  axis(4)
+  mtext(side = 4, line = 3, 'T')
+  legend("right",legend=c("optiskais blīvums","optiskā caurlaidība"),pch=c(0,4),col=c(col,"red3"))
+  dev.off()
+} 
+title_2="3.Attēls. Optiskā blīvuma un optiskās caurlaidības atkarība no viļņa garuma zilam filtram"
+title_3="4.Attēls. Optiskā blīvuma un optiskās caurlaidības atkarība no viļņa garuma dzeltenam filtram"
+title_4="5.Attēls. Optiskā blīvuma un optiskās caurlaidības atkarība no viļņa garuma zaļam filtram"
+zīmē(dati_zils,title_2,"blue")
+zīmē(dati_dzelt,title_3,"yellow3")
+zīmē(dati_zals,title_4,"green")

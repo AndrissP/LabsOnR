@@ -1,0 +1,55 @@
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+dbeta
+round(dbeta,1)
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+rbeta
+n1*d0*beta/m1
+alpha
+n1<-c(100,100,30,15)
+l<-n1*d0*paliel
+m1<-c(23,63,70,96)
+alpha<-l/m1
+n1*d0*beta/m1
+alpha
+n1*d0*paliel/m1
+paliel
+beta
+alpha*10
+n1*d0*beta/m1
+n1*d0/beta^2/m1
+l
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+l
+alpha
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+l
+alpha
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+alpha
+l
+l/10
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+dalpha
+ralpha
+1/n1
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+1/n1
+n1
+m1
+dalpha
+round(dalpha,2)
+source('~/Labori dažādi/Kvanti/Komptona/Komptona.R')
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+dalp_m
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+dalp_m
+mean(alpha)
+bok
+beta_ob
+bok
+alpha
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+AB
+bok
+source('~/Labori dažādi/Optika/Mikroskops/Mikroskops.R')
+AB

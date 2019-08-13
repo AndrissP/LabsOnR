@@ -1,0 +1,512 @@
+plot(da1$mean)
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:36],da1$mean[1:36])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+D_koef
+x_err<-100/3806*idx
+y_err=-100/3806*idx
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:36],da1$mean[1:36])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+x_err<-70/3806*idx*10
+y_err=-70/3806*idx*10
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+pix_size=6.45/28 #*10^-6 #m
+N_dim=1
+save_rate=7.59
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(y)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:36],da1$mean[1:36])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+x_err=0
+y_err=0
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+time2=tail(time,length(time)-1)
+plot(time2[1:36],da1$mean[1:36])
+plot(time2[1:3600],da1$mean[1:3600])
+plot(time2[1:7000],da1$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+eta=c(0.89)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+x_err=0
+y_err=0
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+#plot(y)
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+#parv_x=parv_x-x[1]
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+#,max.overlap=0) #neprklajosies
+time2=tail(time,length(time)-1)
+plot(time2[1:7000],da1$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+Dati<-read.csv("~/Brauns/Eksperiments/test/data_1.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+save_rate=3.94
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:7000],da1$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+plot(time2[1:70],da1$mean[1:70])
+plot(time2[1:7000],da1$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat.dat",head=FALSE)
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+plot(parv_y)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:7000],da1$mean[1:7000])
+plot(time2[1:7000],da2$mean[1:7000])
+plot(time2[1:7000],da1$mean[1:7000])
+plot(time2[1:7000],da2$mean[1:7000])
+plot(time2[1:7000],da1$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+fit1<-lm(da1$mean[1:20]~time2[1:20])
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef2
+fit2<-lm(da2$mean[1:20]~time2[1:20])
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef2
+abline(fit1)
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+abline(fit1)
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+x_err=0
+y_err=0
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_12.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1
+x[x==0]='NA'
+y=Dati$V2
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+plot(parv_y)
+x=Dati$V1 [1500:2500]
+x[x==0]='NA'
+y=Dati$V2 [1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:7000],da1$mean[1:7000])
+plot(time2[1:7000],da2$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:20]~time2[1:20])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+Kludas<-c(summary(fit1)$coefficients[,2],summary(fit2)$coefficients[,2])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_y)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:7000],da2$mean[1:7000])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+plot(time2[1:7000],da1$mean[1:7000])
+plot(time2[1:70],da1$mean[1:70])
+plot(time2[1:70],da2$mean[1:70])
+abline(fit1)
+plot(time2[1:70],da1$mean[1:70])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+sigma2=sqrt(fit2$coefficients[1]/(2*N_dim))*10^-6
+D_koef2<-fit2$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+eta=c(0.89)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(0.75)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+save_rate=7.59*2
+x=Dati$V1 #[1500:2500]
+y=Dati$V2 #[1500:2500]
+x[x==0]='NA'
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+time<-(0:n)/save_rate
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+#plot(y)
+n=length(x)-1
+time<-(0:n)/save_rate
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+eta=c(16.1)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+eta=c(0.75)*10^-3 #Pa*s
+Temp=298
+r=1.87/2*10^-6 #m
+kB=1.38*10^(-23)
+D=kB*Temp/(6*pi*eta*r)
+D
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_11.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x[x==0]='NA'
+y=Dati$V2 #[1500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D
+D_koef
+D_koef2
+Dati<-read.csv("~/Brauns/Eksperiments/3/Data_21.dat",head=FALSE)
+N_dim=1
+pix_size=6.45/28 #*10^-6 #m
+save_rate=7.59
+x=Dati$V1 #[1500:2500]
+x=Dati$V1 [1500:2500]
+x=Dati$V1 [500:2500]
+x[x==0]='NA'
+y=Dati$V2 [500:2500]
+y[y==0]='NA'
+n=length(x)-1
+time<-(0:n)/save_rate
+suppressWarnings(parv_x<-(as.double(x)-as.double(x_err))*pix_size) #jo in NA datos round( ,0)
+suppressWarnings(parv_y<-(as.double(y)-as.double(y_err))*pix_size)
+plot(parv_x)
+tra<-tracks(data.frame(time, parv_x)) #,parv_kluday ,parv_y
+da1<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+tra<-tracks(data.frame(time,parv_y)) #,parv_kluday
+da2<-aggregate(tra, squareDisplacement, FUN="mean.sd",na.rm=TRUE) #parkl
+time2=tail(time,length(time)-1)
+plot(time2[1:70],da1$mean[1:70])
+fit1<-lm(da1$mean[1:2]~time2[1:2])
+fit2<-lm(da2$mean[1:2]~time2[1:2])
+abline(fit1)
+sigma=sqrt(fit1$coefficients[1]/(2*N_dim))*10^-6
+D_koef<-fit1$coefficients[2]/(2*N_dim)*10^-12
+D_koef
+D_koef2
+D
+plot(time2[1:7000],da1$mean[1:7000])
+D_koef<-fit2$coefficients[2]/(2*N_dim)*10^-12
+plot(y)
+plot(time2[1:70],da1$mean[1:70])
+source('~/Labori dažādi/Nep_vide/Skin/skin.R', echo=TRUE)
+arrows(f2,(U_1A2/f2-dU_1Af2)*10^6,f2,(U_1A2/f2+dU_1Af2)*10^6,code=3,length=0.02,angle=90, col='green')
+(U_1A2/f2-dU_1Af2)
+2
+f2
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-4,endRow=11,startCol=3,endCol=11)
+I<-dati$I..A
+diap<-dati$diapozons..V
+dati<-readWorksheetFromFile("dati.xlsx",sheet=1,startRow<-50,endRow=56,startCol=3,endCol=7)
+f<-dati$f*10^3
+Icil=I[1:6]
+#Icil[6]=I[6]*2
+rho_Al=4.7*10^(-8)
+U_M<-dati$Um.bez*10^-3
+U_Al<-c(74.2,79.7,25,13.3,0,0)*10^-3
+U_1A=U_M/Icil*10^-3
+UFarCilF=2*pi*BSp*S_M*N_M
+delta_Al=1/sqrt(pi*mu0*f/rho_Al)
+S_M_min=pi*(0.014)^2
+S_M_max=pi*(0.014+0.0015)^2
+U_Far=2*pi*f*BSp*S_M*N_M
+UFarCilFmin=2*pi*BSp*S_M_min*N_M
+UFarCilFmax=2*pi*BSp*S_M_max*N_M
+#kluda
+dI=diap[1:6]*0.02
+dU=20
+dU_1Af=U_1A/f*sqrt((dI/Icil)^2+(dU/U_M)^2+0.01^2) #kluda dU_1A/f
+x_val=1/sqrt(f)
+fit_Al=lm((U_Al/U_M)[1:4]~ x_val[1:4])
+xval=seq(1,1e+05,100)
+f_skin=1/(((U_Al/U_M)[2]/exp(1)+0.07468)/12.0741)^2  #no grafika noteikta frekvence
+Df=sqrt((1/(2*((U_Al/U_M)[2]/exp(1)+0.07468)/12.0741)^3*0.057/12.0741)^2+((1/(2*((U_Al/U_M)[2]/exp(1)+0.07468)/12.0741)^3*0.07468)/12.0741^2*1.99850)^2)*4 #kluda
+f_teor=1/(pi*mu0/rho_Al)/0.002^2
+skin_Al=1/sqrt(pi*mu0/rho_Al*f_skin)
+plot(f,U_Al/U_M,log='x')
+dev.off()
+plot(f,U_Al/U_M,log='x')
+arrows(f,(U_Al/U_M)*1.07,f, (U_Al/U_M)*0.93, xlab='f, Hz', ylab=expression(paste(U[A]*"/")), code=3,length=0.02,angle=90)
+plot(f,U_Al/U_M,log='x')
+plot(f,U_Al/U_M,log='x'xlab='f, Hz', ylab=expression(paste(U[A]*"/")),)
+plot(f,U_Al/U_M,log='x', xlab='f, Hz', ylab=expression(paste(U[A]*"/")))
+plot(f,U_Al/U_M,log='x', xlab='f, Hz', ylab=expression(paste(U[A]*"/"U[])))
+plot(f,U_Al/U_M,log='x', xlab='f, Hz', ylab=expression(paste(U[Al]*"/",U[M])))
+plot(f,U_Al/U_M,log='x', xlab='f, Hz', ylab=expression(paste(U[Al]*"/",U[M])))
+arrows(f,(U_Al/U_M)*1.07,f, (U_Al/U_M)*0.93, code=3,length=0.02,angle=90)
+lines(xval,1/sqrt(xval)*(12.0741)-0.07468,col='red')
+U_Al/U_M
+plot(f,U_Al/U_M,log='x', xlab='f, Hz', ylab=expression(paste(U[Al]*"/",U[M])))
+arrows(f,(U_Al/U_M)*1.07,f, (U_Al/U_M)*0.93, code=3,length=0.02,angle=90)
+lines(xval,1/sqrt(xval)*(12.0741)-0.07468,col='red')
+points(f_skin,1/sqrt(f_skin)*(12.0741)-0.07468,pch=4,col='green')
+legend("topright",legend=c("Datu punkti","Skinslāņa biezumam atbilstošā f"),pch=c(1,4),col=c("black","green"))
+png("Skin_Al.png", width=800, height=400,pointsize=20)
+par(mar = c(4.5, 4, 1, 2))
+plot(f,U_Al/U_M,log='x', xlab='f, Hz', ylab=expression(paste(U[Al]*"/",U[M])))
+arrows(f,(U_Al/U_M)*1.07,f, (U_Al/U_M)*0.93, code=3,length=0.02,angle=90)
+lines(xval,1/sqrt(xval)*(12.0741)-0.07468,col='red')
+points(f_skin,1/sqrt(f_skin)*(12.0741)-0.07468,pch=4,col='green')
+legend("topright",legend=c("Datu punkti","Skinslāņa biezumam atbilstošā f"),pch=c(1,4),col=c("black","green"))
+dev.off()

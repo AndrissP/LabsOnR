@@ -1,0 +1,338 @@
+x
+source('~/Labori dažādi/Nep_vide/MagSkidrumi/Skidrumi.R', echo=TRUE)
+attiec
+attiec=x[2]*fi
+x
+attiec
+fi
+x[2]
+attiec=x[2]/fi
+attiec
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+lines(c(0,H),c(0,Mteor),col='red')
+HT=79.8868
+ksi=mu0*m*HT/kb/Temp*10^6
+Mteor=M_inf*(1/tanh(ksi)-1/ksi)
+Mteor
+dT=(MT-Msan)/MT/0.003
+ksi=mu0*m*HT/kb/Temp*10^6
+MT=M_inf*(1/tanh(ksi)-1/ksi)
+Msan=17.71255411
+dT=(MT-Msan)/MT/0.003
+dT
+MT
+Msan=13.0539808
+dT=(MT-Msan)/MT/0.003
+dT
+dH=0.01*H #1%, rI=1%
+install.packages("Hmisc")
+library(Hmisc)
+errbar(H,M,2,2)
+errbar(H,M,yplus=2,yminus=2)
+errbar(H,M,yplus=10,yminus=10)
+M
+H
+set.seed(1)
+x <- 1:10
+y <- x + rnorm(10)
+delta <- runif(10)
+errbar( x, y, y + delta, y - delta )
+# Show bootstrap nonparametric CLs for 3 group means and for
+# pairwise differences on same graph
+group <- sample(c('a','b','d'), 200, TRUE)
+y     <- runif(200) + .25*(group=='b') + .5*(group=='d')
+cla <- smean.cl.boot(y[group=='a'],B=100,reps=TRUE)  # usually B=1000
+a   <- attr(cla,'reps')
+clb <- smean.cl.boot(y[group=='b'],B=100,reps=TRUE)
+b   <- attr(clb,'reps')
+cld <- smean.cl.boot(y[group=='d'],B=100,reps=TRUE)
+d   <- attr(cld,'reps')
+a.b <- quantile(a-b,c(.025,.975))
+a.d <- quantile(a-d,c(.025,.975))
+b.d <- quantile(b-d,c(.025,.975))
+set.seed(1)
+x <- 1:10
+y <- x + rnorm(10)
+delta <- runif(10)
+errbar( x, y, y + delta, y - delta )
+# Show bootstrap nonparametric CLs for 3 group means and for
+# pairwise differences on same graph
+group <- sample(c('a','b','d'), 200, TRUE)
+set.seed(1)
+x <- 1:10
+y <- x + rnorm(10)
+delta <- runif(10)
+errbar( x, y, y + delta, y - delta )
+errbar( H,M, M + delta, M - delta )
+errbar( M + dH, M - dH )
+errbar( yminus(M - dH), yplus=(M + dH) )
+errbar(H,M, yminus(M - dH), yplus=(M + dH) )
+errbar( yminus=(M - dH), yplus=(M + dH) )
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) )
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+lines(c(0,H),c(0,Mteor),col='red')
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+lines(c(0,H),c(0,Mteor),col='red')
+x=rez$par
+m=Ms*pi*(x[1]^3)/6 #d
+M_inf=Ms*x[2] #fi_m
+ksi=mu0*m*H/kb/Temp*10^6
+Mteor=M_inf*(1/tanh(ksi)-1/ksi)
+par(mar = c(4.5, 4, 1, 2))
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+lines(c(0,H),c(0,Mteor),col='red')
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) )
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE)
+par(mar = c(4.5, 4, 1, 2))
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+lines(c(0,H),c(0,Mteor),col='red')
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE)
+group <- sample(c('a','b','d'), 200, TRUE)
+y     <- runif(200) + .25*(group=='b') + .5*(group=='d')
+cla <- smean.cl.boot(y[group=='a'],B=100,reps=TRUE)  # usually B=1000
+a   <- attr(cla,'reps')
+clb <- smean.cl.boot(y[group=='b'],B=100,reps=TRUE)
+b   <- attr(clb,'reps')
+cld <- smean.cl.boot(y[group=='d'],B=100,reps=TRUE)
+d   <- attr(cld,'reps')
+a.b <- quantile(a-b,c(.025,.975))
+a.d <- quantile(a-d,c(.025,.975))
+b.d <- quantile(b-d,c(.025,.975))
+errbar(c('a','b','d','a - b','a - d','b - d'),
+c(cla[1],clb[1],cld[1],cla[1]-clb[1],cla[1]-cld[1],clb[1]-cld[1]),
+c(cla[3],clb[3],cld[3],a.b[2],a.d[2],b.d[2]),
+c(cla[2],clb[2],cld[2],a.b[1],a.d[1],b.d[1]),
+Type=c(1,1,1,2,2,2))
+rm(x,y,delta,group,a,b,d,a.b,a.d,b.d,cla,clb,cld)
+cla
+group <- sample(c('a','b','d'), 200, TRUE)
+y     <- runif(200) + .25*(group=='b') + .5*(group=='d')
+cla <- smean.cl.boot(y[group=='a'],B=100,reps=TRUE)  # usually B=1000
+a   <- attr(cla,'reps')
+clb <- smean.cl.boot(y[group=='b'],B=100,reps=TRUE)
+b   <- attr(clb,'reps')
+cld <- smean.cl.boot(y[group=='d'],B=100,reps=TRUE)
+d   <- attr(cld,'reps')
+a.b <- quantile(a-b,c(.025,.975))
+a.d <- quantile(a-d,c(.025,.975))
+b.d <- quantile(b-d,c(.025,.975))
+errbar(c('a','b','d','a - b','a - d','b - d'),
+c(cla[1],clb[1],cld[1],cla[1]-clb[1],cla[1]-cld[1],clb[1]-cld[1]),
+c(cla[3],clb[3],cld[3],a.b[2],a.d[2],b.d[2]),
+c(cla[2],clb[2],cld[2],a.b[1],a.d[1],b.d[1]),
+Type=c(1,1,1,2,2,2))
+cla
+par(mar = c(4.5, 4, 1, 2))
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE)
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE,Type=1)
+par(mar = c(4.5, 4, 1, 2))
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE,Type=1)
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE,Type=1,pch=NA)
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE,Type=1,pch=NA)
+plot(c(0,H),c(0,M), col="blue", xlab="H, kA/m", ylab="M, kA/m")
+errbar(H,M, yminus=(M - dH), yplus=(M + dH) ,add=TRUE,Type=2,pch=NA)
+group <- sample(c('a','b','d'), 200, TRUE)
+y     <- runif(200) + .25*(group=='b') + .5*(group=='d')
+cla <- smean.cl.boot(y[group=='a'],B=100,reps=TRUE)  # usually B=1000
+a   <- attr(cla,'reps')
+clb <- smean.cl.boot(y[group=='b'],B=100,reps=TRUE)
+b   <- attr(clb,'reps')
+cld <- smean.cl.boot(y[group=='d'],B=100,reps=TRUE)
+d   <- attr(cld,'reps')
+a.b <- quantile(a-b,c(.025,.975))
+a.d <- quantile(a-d,c(.025,.975))
+b.d <- quantile(b-d,c(.025,.975))
+errbar(c('a','b','d','a - b','a - d','b - d'),
+c(cla[1],clb[1],cld[1],cla[1]-clb[1],cla[1]-cld[1],clb[1]-cld[1]),
+c(cla[3],clb[3],cld[3],a.b[2],a.d[2],b.d[2]),
+c(cla[2],clb[2],cld[2],a.b[1],a.d[1],b.d[1]),
+Type=c(1,1,1,2,2,2))
+ggplot(H,M)
+ggplot(H,M,aes(x=H,y=M))
+data=data.frame(H,M)
+ggplot(data =data,aes(x=H,y=M))
+ggplot(data =data,aes(H=x,M=y))
+ggplot(data =data,aes(x=H,y=M))
+H
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+Rezult
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+fit1<-lm(I((Rezult[[2]]$Dp_teor-Rezult[[2]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[2]]$Q*10^6))
+abline(fit1,col='green', lty=2)
+fit1<-lm(I((Rezult[[3]]$Dp_teor-Rezult[[3]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[3]]$Q*10^6))
+abline(fit1,col='red', lty=2)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+a=Rezult[[1]]$Dp1...Dp2...Dp3...Dp4
+a
+a*2
+Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4
+Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*2
+Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*100)*10^-5)~I(Rezult[[1]]$Q*10^6))
+fit1
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[1]]$Q*10^6))
+fit1
+abline(fit1, lty=2)
+plot(Rezult[[1]]$Q*10^6,Rezult[[1]]$Dp*10^-5,ylim=c(0,0.29),xlim=c(0,40),xlab=expression(paste("Q, ",cm^3/s)),ylab=expression(paste(Delta, "p, Bar")))
+points(Rezult[[2]]$Q*10^6,Rezult[[2]]$Dp*10^-5,pch=3,col='green')
+points(Rezult[[3]]$Q*10^6,Rezult[[3]]$Dp*10^-5,pch=4,col='red')
+points(Rezult[[4]]$Q*10^6,Rezult[[4]]$Dp*10^-5,pch=5,col='blue')
+arrows(Rezult[[1]]$Q*10^6-5,Rezult[[1]]$Dp*10^-5,Rezult[[1]]$Q*10^6+5,Rezult[[1]]$Dp*10^-5, code=3,length=0.02,angle=90)
+arrows(Rezult[[2]]$Q*10^6-5,Rezult[[2]]$Dp*10^-5,Rezult[[2]]$Q*10^6+5,Rezult[[2]]$Dp*10^-5, col='green', code=3,length=0.02,angle=90)
+arrows(Rezult[[3]]$Q*10^6-5,Rezult[[3]]$Dp*10^-5,Rezult[[3]]$Q*10^6+5,Rezult[[3]]$Dp*10^-5, col='red', code=3,length=0.02,angle=90)
+arrows(Rezult[[4]]$Q*10^6-5,Rezult[[4]]$Dp*10^-5,Rezult[[4]]$Q*10^6+5,Rezult[[4]]$Dp*10^-5, code=3,length=0.02,angle=90, col='blue')
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+fit1
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*100)*10^-5)~I(Rezult[[1]]$Q*10^6))
+fit1
+abline(fit1, lty=2)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*5)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*10)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+fit1<-lm(I((Rezult[[2]]$Dp_teor-Rezult[[2]]$Dp1...Dp2...Dp3...Dp4*10)*10^-5)~I(Rezult[[2]]$Q*10^6))
+abline(fit1,col='green', lty=2)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*10)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+fit1<-lm(I((Rezult[[1]]$Dp_teor-Rezult[[1]]$Dp1...Dp2...Dp3...Dp4*10)*10^-5)~I(Rezult[[1]]$Q*10^6))
+abline(fit1, lty=2)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+startRow=c(22)
+endRow=c(29)
+input<-data.frame(startRow,endRow)
+startRow=input[1]
+endRow=input[2]
+dati<-readWorksheetFromFile("mērījumi.xlsx",sheet=2,startRow<-startRow,endRow=endRow,startCol=1,endCol=13)
+Rms<-dati$Rms
+Re<-dati$Re
+Q=dati$Q..m.3.s
+Dp=dati$X.U.0394.p..Pa
+Dp_teor=B0^2/(2*mu0)*alph*L*Rms*correction
+D0=0.03
+b=0.005
+S0=2*pi*0.03^2
+S1=2*a*b
+rho_alloy=6400
+Dh=2*a*b/(2*a+b) #Aktīvajai daļai
+zeta2=1.05*0.21/sqrt(0.042/Dh)*0.6 ###Aktīvajai daļai
+Dp1=(zeta2+64/Re*L/Dh)*rho_alloy*(Q/(2*a*b))^2/2
+Dh3=0.001+0.01/2
+zeta3=0.3*exp(-Re*10^-4)+(64/Re*0.06/Dh3+0.015*2*a/b)*(S0/S1)^2 #Konfuzoram
+zeta4=0.5*exp(-Re*10^-4)+(64/Re*0.06/Dh3+0.0015*2*a/b)*(S1/S0)^2 #difuzoram
+zetaB=64/Re*0.06/Dh3
+Dp2=(zetaB*2+zeta3+zeta4)*rho_alloy*(2*Q/(S0+S1))^2/2
+zeta1=1.05*0.21/sqrt(0.15/0.06) ###Pašai caurulei
+Dp3=(zeta1+64/Re*1/0.06)*rho_alloy*(Q/(pi*0.03^2))^2/2
+Dh4=(sqrt(201/pi+sqrt(66/pi)))*10^-3
+zeta5=0.3*exp(-Re*10^-4)+(64/Re*0.05/Dh4+0.015*0.005/0.05)*(201/66)^2
+zeta6=0.5*exp(-Re*10^-4)+(64/Re*0.05/Dh4+0.0015*0.005/0.05)*(66/201)^2
+zetaB4=64/Re*0.05/Dh4
+Dp4=(zetaB4*2+zeta5+zeta6)*rho_alloy*(2*Q/(201+66)*10^6)^2/2
+Dp1
+Dp1*13
+results=data.frame(Dp,Dp1+Dp2+Dp3+Dp4,Q,Dp_teor,Dp1*13,Dp2*13,Dp3*13,Dp4*13)
+results
+Result
+Rezult
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis2.R', echo=TRUE)
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Siltumfizika/")
+setwd("C:/Users/Andris/Documents/Labori dažādi/Nep_vide/Siltumfizika/Jānis Užulis &  Andris Potrebko/")
+read.csv("C-Therm/Uzulis_Potrebko_finieris.csv")
+data_fin<-read.csv("C-Therm/Uzulis_Potrebko_finieris.csv")
+kfin<-data_fin$k..W.mK.
+data_putu<-read.csv("C-Therm/Uzulis_Potrebko_putuplasts.csv")
+kfin<-data_putu$k..W.mK.
+Cfin<-data_fin$Heat.Capacity..J.kg.K.
+kfin<-data_fin$k..W.mK.
+Cfin<-data_fin$Heat.Capacity..J.kg.K.
+data_putu<-read.csv("C-Therm/Uzulis_Potrebko_putuplasts.csv")
+kputu<-data_putu$k..W.mK.
+Cputu<-data_putu$Heat.Capacity..J.kg.K.
+plot(kfin)
+plot(kputu)
+mean(kfin)
+sd(kfin)
+mean(kputu)
+sd(kputu)
+mean(Cfin)
+s(Cfin)
+sd(Cfin)
+sd(Cputu)
+mean(Cputu)
+Rfin=17.7/0.2
+Rputu=19.85/0.0324
+Rfin
+Rputu
+R=0.03755/0.0526
+R
+Rfin+Rputu
+k1=17.7
+k2=19.85
+Rfin=k1/kfin
+Rputu=k2/kputu
+R=0.03755/0.0526
+Rfin+Rputu
+k1=17.7
+k2=19.85
+Rfin=k1/kfin
+Rputu=k2/kputu
+Rfin=k1/mean(kfin)
+Rfin=k1/mean(kfin)
+Rputu=k2/mean(kputu)
+Rfin
+Rputu
+DR=sqrt((0.05/d1)^2+(sd(kfin)/kfin)^2)
+d1=17.7
+d2=19.85
+Rfin=d1/mean(kfin)
+Rputu=d2/mean(kputu)
+R=0.03755/0.0526
+Rfin+Rputu
+DR=sqrt((0.05/d1)^2+(sd(kfin)/kfin)^2)
+DRfin=sqrt((0.05/d1)^2+(sd(kfin)/kfin)^2)*Rfin
+DRfin
+DRfin=sqrt((0.05/d1)^2+(sd(kfin)/mean(kfin))^2)*Rfin
+Rfin
+DRfin
+DRfin=sqrt((0.1/d1)^2+(sd(kfin)/mean(kfin))^2)*Rfin
+DRfin
+DRfin=sqrt((0.01/d1)^2+(sd(kfin)/mean(kfin))^2)*Rfin
+DRfin
+DRfin=sqrt((0.1/d1)^2+(sd(kfin)/mean(kfin))^2)*Rfin
+DRputu=sqrt((0.1/d2)^2+(sd(kputu)/mean(kputu))^2)*Rputu
+DRputu
+DR=sqrt((0.2/d2)^2+0.01^2)*Rputu
+DR
+sqrt(DRfin^2+DRputu)
+sqrt(DRfin^2+DRputu^2)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis.R', echo=TRUE)
+source('~/Labori dažādi/Nep_vide/MHD_suknis/Suknis.R', echo=TRUE)
+30^2*pi
+(0.030/2)^2*pi
+0.0005*0.005
+(0.030/2)^2*pi/2.5e-06
+(0.030/2)^2*pi/(0.005*0.05)
+201/66
