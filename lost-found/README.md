@@ -1,2 +1,0 @@
-#LAbsOnR
-All of the Labs on R are in this map. The problam which it is that I accidentally deleted all of the files once and all I could recover was just the files without their names. So, no idea if it is a excel file or .R file and so on. I made a python script that could distinguish most of the files and sort in the folders, still no clue to which lab it belongs. If anybody ever decides to use my lab that you will have to work a lot to find out the right file and sort it all. Please if you do, send me the sorted files, I would be crazily glad.
